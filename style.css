@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+
+html {
+	font-family: Raleway, sans-serif;
+	font-size: 85;
+}
+
+sm {
+	font-size: 20px;
+}
+
+button {
+	font-family: Raleway, sans-serif;
+	background:#fff;
+	border: none;
+	font-size: 210px;
+	text-decoration: none;
+	background-color: #4CAF50; /* mean green? */
+    color: white;
+	display: inline-block;
+	text-align: center;
+    padding: 15px 32px;  
+}
+
+button:hover {
+    background-color: #1422ff; /* True Blue */
+}
+
+p {
+    display: inline-block;
+}
