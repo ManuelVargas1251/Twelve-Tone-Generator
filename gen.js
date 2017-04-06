@@ -13,7 +13,7 @@ function remove_note(note){
 	console.log(note + "%c has been popped", "color: #009A00")
 }
 
-function get_element(num_left){
+function get_element_id(num_left){
 	str1 = "note_"
 	num1 = 12-num_left
 	return element_id =  str1.concat(num1.toString())
@@ -55,15 +55,15 @@ function gen(){
 			//that had been called before so random won't call it again
 		}
 		
-		element_id = get_element(num_left)
+		element_id = get_element_id(num_left)	//create element id
 		document.getElementById(element_id).innerHTML = note;
 		//console.log("%celement: "+element_id, "color: #551188")
 		//console.log("%cnote: "+note, "color: #2244f2")	
 		remove_note(note)
-		console.log("alpha: " + _alphabet)
+		//console.log("alpha: " + _alphabet)
 		num_left -= 1	//decrement
 	}
-	_alphabet = []	//unnecessary
+	_alphabet = []	//unnecessarily cleans array
 }
 
 //create a row
