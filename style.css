@@ -2,7 +2,7 @@
 
 html {
 	font-family: Raleway, sans-serif;
-	font-size: 70;
+	font-size: 65;
 }
 sm {
 	font-size: 18px;
@@ -24,6 +24,7 @@ button:hover {
 }
 p {
     display: inline-block;
+	margin: 0;
 }
 
 /*toggle box*/

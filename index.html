@@ -2,30 +2,26 @@
 	<head>
 		<title>==# #  T  T  G  # #==</title>
 		<link rel="stylesheet" href="style.css">
-		
 	</head>
 	<body onload="main()">
 		Twelve Tone Generator<sm>by Manuel Vargas</sm><br>
 		<button type="button" onclick="create()">Create</button>
-		<!-- Rounded switch -->
+		<!-- accidental toggle -->
 		<sm>Sharps/Flats:</sm>
 		<label class="switch">
-			<input type="checkbox" onclick='toggle_notes(this);'>
+			<input type="checkbox" onclick='toggle_accidental(this);'>
 			<div class="slider round"></div>
 		</label>
-		<br>
-		<p id="note_0"> </p>
-		<p id="note_1"> </p>
-		<p id="note_2"> </p>
-		<p id="note_3"> </p>
-		<p id="note_4"> </p>
-		<p id="note_5"> </p>
-		<p id="note_6"> </p>
-		<p id="note_7"> </p>
-		<p id="note_8"> </p>
-		<p id="note_9"> </p>
-		<p id="note_10"> </p>
-		<p id="note_11"> </p>
-		<script src="gen.js"></script>	
+		<br><br>
+		<!-- display notes-->
+		<p id="note_0"> </p> <p id="note_1"> </p>
+		<p id="note_2"> </p> <p id="note_3"> </p>
+		<p id="note_4"> </p> <p id="note_5"> </p>
+		<p id="note_6"> </p> <p id="note_7"> </p>
+		<p id="note_8"> </p> <p id="note_9"> </p>
+		<p id="note_10"> </p> <p id="note_11"> </p>
+		<script src="row.js"></script>	
+		<script src="matrix.js"></script>	
+		<script src="sound.js"></script>	
 	</body>
 </html>
