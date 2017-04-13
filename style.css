@@ -2,16 +2,16 @@
 
 html {
 	font-family: Raleway, sans-serif;
-	font-size: 65;
+	font-size: 65 px;
 }
 sm {
-	font-size: 18px;
+	font-size: 18 px;
 }
 button {
 	font-family: Raleway, sans-serif;
 	background:#fff;
 	border: none;
-	font-size: 180px;
+	font-size: 160px;
 	text-decoration: none;
 	background-color: #4CAF50; /* mean green? */
     color: white;
@@ -26,7 +26,7 @@ p {
     display: inline-block;
 	margin: 0;
 }
-
+/**************************************************/
 /*toggle box*/
 /* The switch - the box around the slider */
 .switch {
@@ -78,3 +78,31 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/*Table Sytles*/
+
+table {
+	width : 80%;
+/*	width: 80 px;*/
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	
+}
+k {
+	font-size: 48 px;
+}
+
+
+/*
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+	
+	button {
+		font-size: 50%;
+		padding: 15px 32px;  
+	}
+}*/

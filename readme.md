@@ -9,6 +9,8 @@ This program displays a random twelve tone row for twelve tone music. I plan to 
 [Click Here](http://manuelvargas.me/Twelve-Tone-Generator/)
 
 ## Change Log
+1.1.2 - 4/13/17
+* matrix is built but still debugging with correct locations
 
 1.1.1 - 4/8/17
 * optimized random so it always finds a correct number

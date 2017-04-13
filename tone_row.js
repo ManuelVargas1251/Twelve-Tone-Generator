@@ -1,7 +1,6 @@
+//creates initial tone row
+
 //globals
-var _sharps = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
-var _flats = ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab']
-var _alphabet = []	//empty array; will fill w/ sharps or flats 
 var _flats_on = false
 
 //remove selected note from alphabet array
@@ -33,16 +32,21 @@ function toggle_accidental(toggle){
 
 //loads array depending on user's accidental bool preference
 function load_array(){
+	console.clear()	//only show the current working row log
 	_alphabet = []	//unnecessarily cleans array
+	_tone_row = []	//necessarily cleans array
 	
-	if(_flats_on)
+	if(_flats_on){
 		_alphabet = _flats.concat()
-	else
+		_alphabet_copy = _flats.concat()
+	}
+	else{
 		_alphabet = _sharps.concat()
+		_alphabet_copy = _sharps.concat()
+	}
 }
 
-function row(){
-	//console.clear()	
+function tone_row(){
 	load_array()	//puts either sharps or flats in array
 	
 	while(_alphabet.length){	//loop 12 times
@@ -52,17 +56,9 @@ function row(){
 		var element_id = get_element_id(_alphabet.length)	//create and store element id
 		
 		document.getElementById(element_id).innerHTML = note	//send note to html
+		_tone_row.push(note)	//store note in final array to use later
+		
 		remove_note(note)	//remove note from array
 	}
 	//console.log("%c::done::", "color: #009A00")
-}
-
-
-function create(){
-	row()	//creates random row
-	//matrix()	//creates and displays twelve tone matrix based on row
-	//sounds()	//played row in sequence and maybe some other stuff
-}
-
-function main(){
 }
