@@ -77,17 +77,37 @@ function get_table_id(column, row){
 	return id	//return string for note location id in html
 }
 
-function generate_matrix(){
+//get address number
+function get_letter_address(clock_array, letter){
+    for(var i = 0; i < 12;i++ ){
+        if (letter == clock_array[i])
+            return i
+    }
+}
+
+function generate_matrix(clock_array){
 	
 	var row_index = 0, column_index = 1
 
 	/********** 12 rows **********/
 	while(row_index != 12){
-		
 		var trans_array = []	//clean array after every row
-		
+        //
+        var letter = _tone_row[row_index]
+        
+        var letter_address = get_letter_address(clock_array.slice(), letter)
+        
+        var y_letter = 12 - letter_address
+        
+        
+        
+        console.log("letter: " + letter)
+        console.log("letter address: " + letter_address)
+        console.log("y_letter : " + y_letter)
+        
+        
 		//get transposed row
-		trans_array = multi_transpose(_tone_row.slice(), (row_index*-1))
+		trans_array = multi_transpose(_tone_row.slice(), y_letter)
 		console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #dadaff")
 		console.log("transposed array: " + trans_array)
 		
