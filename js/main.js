@@ -1,13 +1,13 @@
 /*
 created by manuel vargas
+https://github.com/ManuelVargas1251
+
 website does twelve tone things
 read the readme.md for more info
 */
 
 //globals
 var _tone_row = [] //row to be shared with all functions
-var _sharps = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
-var _flats = ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab']
 var _alphabet = []	//empty array; will fill w/ sharps or flats
 var _alphabet_copy = []	//for use in matrix
 

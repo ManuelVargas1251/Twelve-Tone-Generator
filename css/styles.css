@@ -1,23 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400);
 
-html {
+html{
 	font-family: Raleway, sans-serif;
-	font-size: 65 px;
 }
-sm {
-	font-size: 18 px;
-}
+
 button {
 	font-family: Raleway, sans-serif;
 	background:#fff;
 	border: none;
-	font-size: 160px;
+	font-size: 150px;
 	text-decoration: none;
-	background-color: #4CAF50; /* mean green? */
+	background-color: #4CAF50;	/* mean green? */
     color: white;
 	display: inline-block;
 	text-align: center;
-    padding: 15px 32px;  
+    padding: 15px 48px;
+	margin: 20px 20px;
 }
 button:hover {
     background-color: #4B9F50;
@@ -90,10 +88,6 @@ table, th, td {
     border-collapse: collapse;
 	
 }
-k {
-	font-size: 48 px;
-}
-
 
 /*
 @media only screen and (max-width: 500px) {
@@ -106,3 +100,6 @@ k {
 		padding: 15px 32px;  
 	}
 }*/
+
+/*Other*/
+

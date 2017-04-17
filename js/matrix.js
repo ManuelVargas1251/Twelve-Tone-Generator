@@ -15,15 +15,13 @@ function status(){
 
 //creates clock array = alpha with a[0] starting with _tone_row's first letter
 function create_clock(){
+    
 	var clock_array = []
 	clock_array.push(_tone_row[0])	//store first element of tone row
-	
 	
 	while(clock_array.length != 12){
 		clock_array.push(transpose_note(clock_array[clock_array.length-1],1))
 	}
-	console.log(clock_array)
-	
 	return clock_array
 }
 
@@ -92,24 +90,28 @@ function generate_matrix(clock_array){
 	/********** 12 rows **********/
 	while(row_index != 12){
 		var trans_array = []	//clean array after every row
-        //
+
+        //in order to get the correct order of transpositions in the matrix,
+        //we have to calulate the order in which the tranposed arrays are printed
+        //we do this by going in the order of the tone row notes and finding it's location
+        //according to the clock array which is just a tranposed version of the alphabet array
+        //once we know the address for the note, we can subtract it from 12 and that will
+        //give us which tranposition array we should compute
+        //do this for the entire tone row
         var letter = _tone_row[row_index]
-        
         var letter_address = get_letter_address(clock_array.slice(), letter)
-        
         var y_letter = 12 - letter_address
+        //y_letter represents how many half steps we must tranpose the original tone row
+        //inorder receive the correct tranposition
         
+        //console.log("letter: " + letter)
+        //console.log("letter address: " + letter_address)
+        //console.log("y_letter : " + y_letter)
         
-        
-        console.log("letter: " + letter)
-        console.log("letter address: " + letter_address)
-        console.log("y_letter : " + y_letter)
-        
-        
-		//get transposed row
+		//get transposed row according to the y_letter
 		trans_array = multi_transpose(_tone_row.slice(), y_letter)
-		console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #dadaff")
-		console.log("transposed array: " + trans_array)
+		//console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #dadaff")
+		//console.log("transposed array: " + trans_array)
 		
 		
 		/********** 12 notes **********/
@@ -129,7 +131,7 @@ function generate_matrix(clock_array){
 
 //main matrix function
 function matrix(){
-	status()			//displays arrays
-	var clock_array = create_clock()		//creates new alpha array based on the tone row
-	generate_matrix(clock_array)	//generates and populates matrix
+	//status()			//displays arrays
+    //creates new alpha array based on the tone row and pass
+	generate_matrix(create_clock())	//generates and populates matrix
 }

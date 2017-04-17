@@ -2,14 +2,17 @@
 <html>
 	<head>
 		<title>==# #  T  T  G  # #==</title>
-		<link rel="stylesheet" href="style.css">
-		<script src="https://unpkg.com/vexflow@1.2.83/releases/vexflow-min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- styles -->
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/animate.css">
 	</head>
+	
 	<body onload="main()">
-		Twelve Tone Generator<sm>by Manuel Vargas</sm><br>
-		<button type="button" onclick="create()">Create</button> 
+		<p class="animated bounceInLeft"><strong>Twelve Tone Generator</strong> by Manuel Vargas</p><br>
+		<button id="tt" class="animated tada" type="button" onclick="create()">Create</button> 
 		<!-- accidental toggle -->
-		<sm>Sharps/Flats:</sm>
+		Sharps/Flats:
 		<label class="switch">
 			<input type="checkbox" onclick='toggle_accidental(this);'>
 			<div class="slider round"></div>
@@ -219,10 +222,17 @@
 		<p id="note_8"> </p> <p id="note_9"> </p>
 		<p id="note_10"> </p> <p id="note_11"> </p>
 		<div id="staff"></div>
-		<script src="main.js"></script>	
-		<script src="tone_row.js"></script>	
-		<script src="notation.js"></script>	
-		<script src="matrix.js"></script>	
-		<script src="sound.js"></script>	
+		
+		<!-- external libraries -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://unpkg.com/vexflow@1.2.83/releases/vexflow-min.js"></script>
+		
+		<!-- local libraries -->
+		<script src="js/main.js"></script>	
+		<script src="js/animations.js"></script>	
+		<script src="js/tone_row.js"></script>	
+		<script src="js/notation.js"></script>	
+		<script src="js/matrix.js"></script>	
+		<script src="js/sound.js"></script>	
 	</body>
 </html>
