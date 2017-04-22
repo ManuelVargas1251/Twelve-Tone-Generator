@@ -1,11 +1,4 @@
-//generates matrix
-
-//transformations
-	//inversion (denoted I)
-	//retrograde (R)
-	//retrograde-inversion (RI)
-	//"original" or prime form (P)
-
+//matrix
 
 function status(){
 	console.log("%c::::::::matrix::::::::", 'background: #1c1c1c; color: #ffda55')
@@ -129,9 +122,25 @@ function generate_matrix(clock_array){
 	}
 }
 
+
+//shows matrix after row is created but before matrix data is generated
+function show_matrix(){
+
+	var matrix = document.getElementById('matrix');
+	
+	
+	if(_hide_table == true){
+		matrix.style.display = 'block'
+		_hide_table = false	//toggle the state
+	}
+		
+}
+
 //main matrix function
 function matrix(){
 	//status()			//displays arrays
+	show_matrix()	//unhide the matrix
+	
     //creates new alpha array based on the tone row and pass
 	generate_matrix(create_clock())	//generates and populates matrix
 }

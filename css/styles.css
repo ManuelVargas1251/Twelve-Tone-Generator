@@ -3,7 +3,16 @@
 html{
 	font-family: Raleway, sans-serif;
 }
+p {
+    display: inline-block;
+	margin: 0;
+}
 
+k{
+	font-weight: normal; /*they weren't normal by default?*/
+}
+
+/* button */
 button {
 	font-family: Raleway, sans-serif;
 	background:#fff;
@@ -20,10 +29,24 @@ button {
 button:hover {
     background-color: #4B9F50;
 }
-p {
-    display: inline-block;
-	margin: 0;
+
+/* Table */
+table {
+/*	width : 120 px;*/
+/*	width: 80 px;*/
+	border-collapse: collapse;	/* causing extra border problem */
+	
 }
+table, th, td {
+   border: 1px solid black; 
+   	
+	
+}
+
+#matrix {
+	display: none;
+}
+
 /**************************************************/
 /*toggle box*/
 /* The switch - the box around the slider */
@@ -77,17 +100,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/*Table Sytles*/
 
-table {
-	width : 80%;
-/*	width: 80 px;*/
-}
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-	
-}
 
 /*
 @media only screen and (max-width: 500px) {
@@ -99,7 +112,5 @@ table, th, td {
 		font-size: 50%;
 		padding: 15px 32px;  
 	}
-}*/
-
-/*Other*/
-
+}
+*/

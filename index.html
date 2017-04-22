@@ -10,16 +10,27 @@
 	
 	<body onload="main()">
 		<p class="animated bounceInLeft"><strong>Twelve Tone Generator</strong> by Manuel Vargas</p><br>
-		<button id="tt" class="animated tada" type="button" onclick="create()">Create</button> 
+		<button id="tt" class="animated tada" type="button" onclick="create()" >Create</button> 
 		<!-- accidental toggle -->
 		Sharps/Flats:
 		<label class="switch">
 			<input type="checkbox" onclick='toggle_accidental(this);'>
 			<div class="slider round"></div>
 		</label>
+		
+		<!-- display notes--><br><br>
+		<strong>Tone Row:</strong>
+			<p id="note_0"> </p> <p id="note_1"> </p>
+			<p id="note_2"> </p> <p id="note_3"> </p>
+			<p id="note_4"> </p> <p id="note_5"> </p>
+			<p id="note_6"> </p> <p id="note_7"> </p>
+			<p id="note_8"> </p> <p id="note_9"> </p>
+			<p id="note_10"> </p> <p id="note_11"> </p>
 
+		<div id="staff"></div>
+		
 		<br><br>
-		<table >
+		<table id="matrix">
 <!--			#1-->
 			<tr>
 				<th><k id="1-1"></k></th>
@@ -212,16 +223,6 @@
 				<th><k id="12-12"></k></th>
 			</tr>
 		</table>
-
-		<br><br>
-		<!-- display notes-->
-		<p id="note_0"> </p> <p id="note_1"> </p>
-		<p id="note_2"> </p> <p id="note_3"> </p>
-		<p id="note_4"> </p> <p id="note_5"> </p>
-		<p id="note_6"> </p> <p id="note_7"> </p>
-		<p id="note_8"> </p> <p id="note_9"> </p>
-		<p id="note_10"> </p> <p id="note_11"> </p>
-		<div id="staff"></div>
 		
 		<!-- external libraries -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
