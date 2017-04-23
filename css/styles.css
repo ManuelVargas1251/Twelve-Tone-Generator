@@ -2,29 +2,48 @@
 
 html{
 	font-family: Raleway, sans-serif;
+	padding: 15px;
 }
 p {
-    display: inline-block;
 	margin: 0;
 }
 
-k{
-	font-weight: normal; /*they weren't normal by default?*/
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/*smaller header 1 text*/
+sm {
+	font-weight: normal;
+	font-size: 50%;
+}
+
+/* tone row */
+row{
+	display: inline-block;
+}
+/* matrix output*/
+k {
+	font-weight: normal; /* they weren't normal by default? */
 }
 
 /* button */
 button {
+	/*text*/
 	font-family: Raleway, sans-serif;
+	font-size: 40px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	
 	background:#fff;
 	border: none;
-	font-size: 150px;
-	text-decoration: none;
 	background-color: #4CAF50;	/* mean green? */
-    color: white;
-	display: inline-block;
-	text-align: center;
-    padding: 15px 48px;
-	margin: 20px 20px;
+    padding: 10px 35px;
+	border-radius: 10px;
+	/*display: inline-block;*/
+	/*margin: 20px 20px;*/
 }
 button:hover {
     background-color: #4B9F50;
@@ -37,7 +56,7 @@ table {
 	border-collapse: collapse;	/* causing extra border problem */
 	
 }
-table, th, td {
+th, td {
    border: 1px solid black; 
 }
 
@@ -104,15 +123,31 @@ input:checked + .slider:before {
 
 
 
-/*
-@media only screen and (max-width: 500px) {
-    body {
-        background-color: lightblue;
+/*page panels*/
+
+#left-panel {
+	float: left;
+    width: 40%;
+}
+
+#main-panel {
+	float: right;
+    width: 60%;
+}
+
+
+mymobile {
+	display: none;
+}
+
+@media only screen and (max-width: 570px) {
+    my-mobile {
+        display: block;
     }
-	
-	button {
-		font-size: 50%;
-		padding: 15px 32px;  
+	html {
+		display: block;
+	}
+	body {
+		display: none;
 	}
 }
-*/

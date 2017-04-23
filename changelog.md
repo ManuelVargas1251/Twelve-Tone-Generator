@@ -1,18 +1,30 @@
-# Change Log
+# Changelog
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-### Added
-- input your own tone row
-- view your tone row on a staff
+### Added (in order of importance)
+- view your tone row on a staff using vexflow
 - play the notes on the tone row
+- input your own tone row
 - play the notes on the matrix by hovering?
+- decide length of notes?
+- redesign with bootstrap
+
+## [1.2.4] - 2017-04-23
+### Added
+- two panels, left for info/settings, main for tone row, matrix, and future additions
+
+### Changed
+- License from MIT to GNU AGPLv3
+- title to "Twelve Tone Generator by Manuel Vargas"
+- "Create" button is a lot smaller
 
 ### Removed 
 - extra border box on matrix
+- functionality for mobile use for now
 
 ## [1.2.3] - 2017-04-22
 ### Added
@@ -53,6 +65,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.2.4]: #
 [1.2.3]: #
 [1.2.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/36752c536ec4fbf6110b0997b17e4c9dced19c4d
 [1.2.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/d664ab4799661eb93b547a37559f3423c7fdab15
