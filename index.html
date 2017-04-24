@@ -12,16 +12,23 @@
 		
 		<div id="left-panel">
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone Generator</a><br>
-				<sm>by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
-			</h1><br>
-			<button id="tt" class="animated tada" type="button" onclick="create()" >Create</button><br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone Generator</a><sm> 1.2.5<br>
+				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br><br>
+			</h1>
+			
+			
+			<!-- settings -->
+			<h2>Settings</h2>
 			<!-- accidental toggle -->
-			<h2>Sharps/Flats:</h2>
-			<label class="switch">
-				<input type="checkbox" onclick='toggle_accidental(this);'>
-				<div class="slider round"></div>
-			</label>
+			<div id="settings">
+				<h3 style="display: inline; ">Flats </h3>
+				<label class="switch">
+					<input type="checkbox" onclick='toggle_accidental(this);'>
+					<div class="slider round"></div>
+				</label>
+			</div>
+			<br><br><br><br><br><br>
+			<button id="tt" class="animated tada" type="button" onclick="create()" >Create</button><br>
 		</div>
 		
 		<div id="main-panel">

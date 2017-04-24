@@ -5,13 +5,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-### Added (in order of importance)
+### Future Additions (in order of importance)
 - view your tone row on a staff using vexflow
 - play the notes on the tone row
 - input your own tone row
-- play the notes on the matrix by hovering?
-- decide length of notes?
-- redesign with bootstrap
+- color scheme
+- [derived rows](https://en.wikipedia.org/wiki/Derived_row)
+- [combinatoriality](https://en.wikipedia.org/wiki/Combinatoriality)
+- play the notes on the matrix by hovering (far off)
+- decide length of notes (far off)
+- redesign with bootstrap (far off)
+
+## [1.2.5] - 2017-04-24
+### Changed
+- interface layout: sidebar settings
+- "Create" button below all future settings
 
 ## [1.2.4] - 2017-04-23
 ### Added
@@ -65,8 +73,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
-[1.2.4]: #
-[1.2.3]: #
+[1.2.5]: #
+[1.2.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/eb5415cea952231762e518f7f5a0e3f9d386cb8a
+[1.2.3]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/438fb1bd4c74ca9e281846e5f83157b7dcd0bd96
 [1.2.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/36752c536ec4fbf6110b0997b17e4c9dced19c4d
 [1.2.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/d664ab4799661eb93b547a37559f3423c7fdab15
 [1.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/2375acb863b3de644ee51cbccfd61ede348cd16d

@@ -1,4 +1,5 @@
 //button animation
+/*
 $('#tt').on('click', function(){
 	$('#tt').removeClass('animated tada');
 	$('#tt').addClass('animated pulse');
@@ -6,3 +7,4 @@ $('#tt').on('click', function(){
 		$('#tt').removeClass('animated pulse');	
 	});
 });
+*/

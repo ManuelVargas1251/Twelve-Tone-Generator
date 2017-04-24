@@ -2,7 +2,14 @@
 
 html{
 	font-family: Raleway, sans-serif;
-	padding: 15px;
+	overflow: hidden;
+/*	padding: 15px;*/
+
+}
+
+body {
+	margin:0px;
+	padding:0px;
 }
 p {
 	margin: 0;
@@ -32,7 +39,7 @@ k {
 button {
 	/*text*/
 	font-family: Raleway, sans-serif;
-	font-size: 40px;
+	font-size: 30px;
 	text-decoration: none;
 	color: white;
 	text-align: center;
@@ -40,7 +47,7 @@ button {
 	background:#fff;
 	border: none;
 	background-color: #4CAF50;	/* mean green? */
-    padding: 10px 35px;
+    padding: 5px 15px;
 	border-radius: 10px;
 	/*display: inline-block;*/
 	/*margin: 20px 20px;*/
@@ -68,14 +75,71 @@ tr:nth-child(even) {
 	display: none;
 }
 
+
+
+/*page panels*/
+
+#left-panel {
+/*    float: left;*/
+/*    width: 20%;*/
+/*	display: inline-block;*/
+	
+	background-color: #cdc;
+	width:400px;
+	height:100%;
+	display:block;
+	position:absolute;
+	padding: 20px;
+/*	left:-200px;*/
+	top:0px;
+/*	transition:left 0.3s linear;*/
+}
+
+#main-panel {
+/*    width: 30px;*/
+	position:absolute;
+	display:inline-block;
+	left:450px;
+}
+
+#settings {
+/*	background: #ddd;*/
+	padding:15px 0px;
+	border-bottom: 2px solid #eee;
+	border-top: 2px solid #eee;
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+    my-mobile {
+/*        display: block;*/
+    }
+	html {
+/*		display: block;*/
+	}
+	body {
+/*		display: none;*/
+	}
+	#main-panel {
+		display: block;
+		padding-top: 35px;
+	}
+	row {
+		display: inline;
+	}
+}
+
+
 /**************************************************/
 /*toggle box*/
 /* The switch - the box around the slider */
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 54px;
+	height: 25px;
+	float: right;
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
@@ -87,20 +151,20 @@ tr:nth-child(even) {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #bbb;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 19px;
+  width: 19px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 input:checked + .slider {
   background-color: #4CAF50;
@@ -115,39 +179,8 @@ input:checked + .slider:before {
 }
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 30px;
 }
 .slider.round:before {
   border-radius: 50%;
-}
-
-
-
-/*page panels*/
-
-#left-panel {
-	float: left;
-    width: 40%;
-}
-
-#main-panel {
-	float: right;
-    width: 60%;
-}
-
-
-mymobile {
-	display: none;
-}
-
-@media only screen and (max-width: 570px) {
-    my-mobile {
-        display: block;
-    }
-	html {
-		display: block;
-	}
-	body {
-		display: none;
-	}
 }
