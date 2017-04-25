@@ -2,17 +2,21 @@
 <html>
 	<head>
 		<title>Twelve Tone Generator by Manuel Vargas</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- styles -->
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/hover-min.css" media="all">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	</head>
 	<mymobile>cannot view on mobile<br></mymobile>
 	<body onload="main()">
 		
 		<div id="left-panel">
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone Generator</a><sm> 1.2.5<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.3.0<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br><br>
 			</h1>
 			
@@ -21,30 +25,35 @@
 			<h2>Settings</h2>
 			<!-- accidental toggle -->
 			<div id="settings">
-				<h3 style="display: inline; ">Flats </h3>
+				<h3 style="display: inline; padding-left: 1em;">Flats </h3>
 				<label class="switch">
 					<input type="checkbox" onclick='toggle_accidental(this);'>
 					<div class="slider round"></div>
 				</label>
 			</div>
 			<br><br><br><br><br><br>
-			<button id="tt" class="animated tada" type="button" onclick="create()" >Create</button><br>
+			<center>
+				<button id="tt" class="hvr-buzz-out" type="button" onclick="create()" style="box-shadow: -4px 6px;">Create</button></center><br>
+<!--				<button id="tt" class="hvr-buzz" type="button">Create</button><br>-->
+				
+
 		</div>
 		
 		<div id="main-panel">
 			<!-- display notes--><br><br>
-			<strong>Tone Row:</strong>
+			<strong style="font-size: 30px;">Tone Row<br></strong>
 				<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
 				<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
 				<row id="note_6"> </row> <row id="note_7"> </row> <row id="note_8"> </row>
 				<row id="note_9"> </row> <row id="note_10"> </row> <row id="note_11"> </row>
-
-			<!-- display musical staff -->
-			<div id="staff"></div>
-
-			<br><br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			<!-- display matrix	-->
-			<table id="matrix">
+			<strong style="font-size: 30px;">Tone Matrix<br><br></strong>
+			<table class="hoverTable" id="matrix">
 	<!--			#1-->
 				<tr>
 					<th><k id="1-1"></k></th>
@@ -239,9 +248,30 @@
 			</table>
 		</div>
 		
+		<div id="white-panel">
+			<!-- display musical staff -->
+			<div id="staff" style="display: block;"></div><br>
+		</div>
+		
+		
+		
 		<!-- external libraries -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://unpkg.com/vexflow@1.2.83/releases/vexflow-min.js"></script>
+		
+		<!--google analytics-->
+		
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-77813077-2', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+		
 		
 		<!-- local libraries -->
 		<script src="js/main.js"></script>	
