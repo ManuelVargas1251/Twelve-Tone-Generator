@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Future Additions (in order of importance)
 - play the notes on the tone row
 - input your own tone row
-- color scheme
 - make current row change between sharps/flats with toggle instead of waiting for next row
 - [derived rows](https://en.wikipedia.org/wiki/Derived_row)
 - [combinatoriality](https://en.wikipedia.org/wiki/Combinatoriality)
@@ -19,12 +18,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+## [1.4] - 2017-04-26
+### Added
+- themes made by [luke garrison](https://github.com/lag0215)
+- bass clef notation toggle
+- panels are cleared before creation
+- 17 rows can now be viewed at once before refresh on larger screens (level 0)
 
 ## [1.3.0] - 2017-04-25
 ### Added
 - view your tone row on a staff using vexflow (problem loading more than 7)
 - Google analytics
-
+- responsiveness (only 1 level)
 ### Changed
 - new ui
 - button animation
@@ -89,6 +94,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.4]: #
 [1.3.0]: #
 [1.2.5]: #
 [1.2.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/eb5415cea952231762e518f7f5a0e3f9d386cb8a

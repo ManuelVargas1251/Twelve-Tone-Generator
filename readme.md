@@ -1,9 +1,9 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
 ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
-![Version](https://img.shields.io/badge/Version-1.3.0-blue.svg?style=flat)
+![Version](https://img.shields.io/badge/Version-1.4-blue.svg?style=flat)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
-This program displays a random twelve tone row and it's matrix. I plan to notate the tone row on a staff using [Vexflow](https://github.com/0xfe/vexflow) and add sound.
+This web application creates a random twelve tone row, it's matrix and notates it on a staff. I plan to add sound soon. Themes by [Luke Garrison](https://github.com/lag0215).
 
 ## Demo
 [View Demo](http://manuelvargas.me/Twelve-Tone-Generator/)

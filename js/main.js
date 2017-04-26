@@ -16,8 +16,14 @@ function create(){
 	//custom_row()	//user can input their own tone row instead of random
 	tone_row()	//creates random row
 	notation()	//draws notes onto staff
+	show_labels() 	//animations.js
 	matrix()	//creates/displays matrix based on row
+	myanimations() //matrix animations
 	//sounds()	//playes row in sequence and maybe some other stuff
+}
+
+function about(){
+	console.log("Hello")
 }
 
 function main(){

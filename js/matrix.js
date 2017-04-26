@@ -15,6 +15,7 @@ function create_clock(){
 	while(clock_array.length != 12){
 		clock_array.push(transpose_note(clock_array[clock_array.length-1],1))
 	}
+	//console.log(clock_array)
 	return clock_array
 }
 
@@ -112,8 +113,14 @@ function generate_matrix(clock_array){
 			
 			var table_id = get_table_id(column_index, row_index)
 			var actual_index = column_index - 1
-			document.getElementById(table_id).innerHTML = trans_array[actual_index]	//send note to html
+			
 
+			document.getElementById(table_id).innerHTML = trans_array[actual_index]	//send note to html
+			
+			//document.getElementById(table_id).addClass('animated tada')
+			$(table_id).toggleClass('animated tada');
+
+			console.log("sending:")
 			column_index++
 		}
 		//console.log("hey")
@@ -138,7 +145,8 @@ function show_matrix(){
 
 //main matrix function
 function matrix(){
-	//status()			//displays arrays
+	status()			//displays arrays
+	
 	show_matrix()	//unhide the matrix
 	
     //creates new alpha array based on the tone row and pass

@@ -3,45 +3,76 @@
 	<head>
 		<title>Twelve Tone Generator by Manuel Vargas</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- styles -->
+		
+		<!-- my styles -->
+		<link rel="stylesheet" href="css/header.css">
 		<link rel="stylesheet" href="css/styles.css">
+		
+		<!-- animation libraries -->
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/hover-min.css" media="all">
 		
+		<!-- cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
-	<mymobile>cannot view on mobile<br></mymobile>
+
 	<body onload="main()">
 		
 		<div id="left-panel">
 			<h1 class="animated bounceInLeft">
 				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.3.0<br>
-				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br><br>
+				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
 			
 			<!-- settings -->
 			<h2>Settings</h2>
+			
 			<!-- accidental toggle -->
 			<div id="settings">
 				<h3 style="display: inline; padding-left: 1em;">Flats </h3>
 				<label class="switch">
-					<input type="checkbox" onclick='toggle_accidental(this);'>
+					<input type="checkbox" onclick='toggle_accidental(this)'>
 					<div class="slider round"></div>
-				</label>
+				</label><br>
 			</div>
-			<br><br><br><br><br><br>
+			
+			<!-- clef toggle -->	
+			<div id="settings">
+				<h3 style="display: inline; padding-left: 1em;">Bass </h3>
+				<label class="switch">
+					<input type="checkbox" onclick='toggle_clef(this)'>
+					<div class="slider round"></div>
+				</label><br>
+			</div>
+			
+			<br><br>
+			<br>
+			
 			<center>
-				<button id="tt" class="hvr-buzz-out" type="button" onclick="create()" style="box-shadow: -4px 6px;">Create</button></center><br>
-<!--				<button id="tt" class="hvr-buzz" type="button">Create</button><br>-->
-				
+				<button id="tt" class="hvr-buzz-out" type="button" onclick="create()" >Create</button>
+			
+				<br><br>
+			
+				<button class="hvr-buzz-out">
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a>
+				</button>
+			</center><br><br>
+			
+			<ul id="color-switcher">
+				<li id="wave" style="border: 4px solid #3f789e;" class="hvr-shrink"></li>
+				<li id="poupon" style="border: 4px solid #80792f;" class="hvr-shrink"></li>
+				<li id="pistacio" style="border: 4px solid #397a5e;" class="hvr-shrink"></li>
+				<li id="autumn" style="border: 4px solid #8a3d1e;" class="hvr-shrink"></li>
+			</ul>
+
 
 		</div>
 		
 		<div id="main-panel">
 			<!-- display notes--><br><br>
-			<strong style="font-size: 30px;">Tone Row<br></strong>
+			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong><br>
 				<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
 				<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
 				<row id="note_6"> </row> <row id="note_7"> </row> <row id="note_8"> </row>
@@ -52,7 +83,7 @@
 			<br>
 			<br>
 			<!-- display matrix	-->
-			<strong style="font-size: 30px;">Tone Matrix<br><br></strong>
+			<strong id="hide-2" style="font-size: 30px; display: none;">Tone Matrix<br></strong><br>
 			<table class="hoverTable" id="matrix">
 	<!--			#1-->
 				<tr>
@@ -250,17 +281,15 @@
 		
 		<div id="white-panel">
 			<!-- display musical staff -->
-			<div id="staff" style="display: block;"></div><br>
+			<div id="staff" style="display: block;"></div>
 		</div>
-		
-		
 		
 		<!-- external libraries -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://unpkg.com/vexflow@1.2.83/releases/vexflow-min.js"></script>
 		
 		<!--google analytics-->
-		
+		<!--
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -271,7 +300,7 @@
 			ga('send', 'pageview');
 
 		</script>
-		
+		-->
 		
 		<!-- local libraries -->
 		<script src="js/main.js"></script>	

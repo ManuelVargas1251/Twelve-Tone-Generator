@@ -46,6 +46,7 @@ function load_array(){
 
 function tone_row(){
 	load_array()	//puts either sharps or flats in array
+
 	while(_alphabet.length){	//loop 12 times
         
 		//random int from 0 to length of array

@@ -1,27 +1,74 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+/******/
+/*main*/
+/******/
 
 html{
 	font-family: Raleway, sans-serif;
 	overflow: hidden;
-	background: #1c1c1c;
-/*	height: 100%;*/
-	color: white;
-/*	padding: 15px;*/
-/*	margin:0px;*/
-
+	background: var(--black-accent);
+	color: var(--white-accent);
+	/*	height: 100%;*/
+	/*	padding: 15px;*/
+	/*	margin:0px;*/
 }
 
 body {
 	margin:0px;
 	padding:0px;
 }
+/*page panels*/
+
+#left-panel {
+/*    float: left;*/
+/*    width: 20%;*/
+/*	display: inline-block;*/
+	
+	background-color: var(--theme-color);
+	width:200px;
+	height:100%;
+	display:block;
+	position:absolute;
+	padding: 20px;
+/*	left:-200px;*/
+	top:0px;
+/*	transition:left 0.3s linear;*/
+}
+
+#main-panel {
+/*    width: 30px;*/
+	position:absolute;
+	display:inline-block;
+	left:250px;
+	padding-left: 50px;
+}
+
+#white-panel {
+	background-color: var(--white-accent);
+	position:absolute;
+	display:block;
+	left:900px;
+	padding-left: 20px;
+	height:100%;
+	width:60%;
+	top:0px;
+}
+
+#settings {
+/*	background: #ddd;*/
+	padding:15px 0px;
+	border-bottom: 1px solid var(--white-accent);
+/*	border-top: 1px solid var(--white-accent);*/
+
+}
+
+
 p {
 	margin: 0;
 }
 
 a {
 	text-decoration: none;
-	color: white;
+	color: color: var(--white-accent);
 }
 
 /*smaller header 1 text*/
@@ -40,30 +87,33 @@ k {
 	font-weight: normal; /* they weren't normal by default? */
 }
 
+/**********/
 /* button */
+/**********/
 button {
 	/*text*/
 	font-family: Raleway, sans-serif;
-	font-size: 30px;
+	font-size: 20px;
 	text-decoration: none;
-	color: white;
+	color: var(--white-accent);
 	text-align: center;
+	font-weight: bold;
 	
 	/*everything else*/
 	outline: none;
-	background:#fff;
+	background: var(--white-accent);
 	border: none;
-	background-color: #1c1c1c;	/* mean green? */
-    padding: 5px 15px;
+	background-color: var(--black-accent);	/* mean green? */
+    padding: 7px 22px;
 	border-radius: 10px;
+	display: inline;
 	/*display: inline-block;*/
 	/*margin: 20px 20px;*/
 }
-button:hover {
-    background-color: #2c2c2c;
-}
 
+/*********/
 /* Table */
+/*********/
 table {
 /*	width : 120 px;*/
 /*	width: 80 px;*/
@@ -72,7 +122,7 @@ table {
 	
 }
 th, td {
-   border: 1px solid white; 
+   border: 1px solid var(--white-accent); 
 }
 
 tr:nth-child(even) {
@@ -86,7 +136,7 @@ tr:nth-child(even) {
 
 /* Define the hover highlight color for the table row */
 .hoverTable tr:hover {
-	background-color: #2859a3;
+	background-color: var(--theme-color);
 }
 /*
 td, th {
@@ -107,95 +157,14 @@ th:hover::after{
 table {
   overflow: hidden;
 }
-
-
-
 */
-
-
-
-
-
-
 
 #matrix {
 	display: none;
 }
 
-
-
-/*page panels*/
-
-#left-panel {
-/*    float: left;*/
-/*    width: 20%;*/
-/*	display: inline-block;*/
-	
-	background-color:#2859a3;
-	width:200px;
-	height:100%;
-	display:block;
-	position:absolute;
-	padding: 20px;
-/*	left:-200px;*/
-	top:0px;
-/*	transition:left 0.3s linear;*/
-}
-
-#main-panel {
-/*    width: 30px;*/
-	position:absolute;
-	display:inline-block;
-	left:250px;
-	padding-left: 30px;
-}
-
-#white-panel {
-	background-color:#fff;
-	position:absolute;
-	display:block;
-	left:900px;
-	padding-left: 20px;
-	height:100%;
-	width:60%;
-	top:0px;
-}
-
-#settings {
-/*	background: #ddd;*/
-	padding:15px 0px;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
-
-}
-
-.footer {
-	height: 50px;
-	width: 100%;
-	margin-top: 120%;
-}
-
 i {
 	margin:10px;
-}
-
-@media only screen and (max-width: 1100px) {
-    my-mobile {
-/*        display: block;*/
-    }
-	html {
-/*		display: block;*/
-	}
-	body {
-/*		display: none;*/
-	}
-	#main-panel {
-		display: block;
-		padding-top: 35px;
-	}
-	row {
-		display: inline;
-	}
 }
 
 
@@ -209,6 +178,8 @@ i {
 	height: 25px;
 	float: right;
 	margin-right: 30px;
+	border-radius: 50px;
+/*	border: 2px solid var(--theme-dark);*/
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
@@ -220,7 +191,7 @@ i {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #1c1c1c;;
+	background-color: var(--black-accent);
 	-webkit-transition: .2s;
 	transition: .2s;
 }
@@ -231,15 +202,15 @@ i {
 	width: 18px;
 	left: 4px;
 	bottom: 4px;
-	background-color: white;
+	background-color: var(--white-accent);
 	-webkit-transition: .3s;
 	transition: .3s;
 }
 input:checked + .slider {
-	background-color: #91bbff;
+	background-color: var(--theme-dark);
 }
 input:focus + .slider {
-	box-shadow: 0 0 1px #91bbff;
+	box-shadow: 0 0 1px #ff0000;
 }
 input:checked + .slider:before {
 	-webkit-transform: translateX(70px);
@@ -252,4 +223,61 @@ input:checked + .slider:before {
 }
 .slider.round:before {
 	border-radius: 50%;
+}
+
+
+
+
+#color-switcher {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#color-switcher li {
+  	float: left;
+/*  width: 30px;*/
+	width: 15%;
+	height: 30px;
+	margin: 0 12px 0px 0;
+/*	padding-left: 5px;*/
+	border-radius: 30px;
+/*  	border: 2px solid var(--theme-dark);*/
+}
+
+#wave {
+  background: #55aad1;
+}
+#poupon {
+  background: #beb048;
+}
+#pistacio {
+  background: #55b483;
+}
+#autumn {
+  background: #cd552c;
+}
+
+
+/*for smaller screens*/
+@media only screen and (max-width: 1400px) {
+	row {
+		font-size: 20px;
+	}
+	#main-panel{
+		padding-left: 20px;
+		padding-top: 35px important!;
+		display: block;
+	}
+	#white-panel {
+		width:60%;
+		left:700px;
+		padding-left: 35px;
+	}
+	table {
+		font-size: 20px;
+	}
+	row {
+		display: inline;
+	}
 }

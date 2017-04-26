@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/*	
+theme colors
+	#55aad1   //default
+	#beb048
+	#55b483
+	#cd552c
+*/
+
+
+:root {
+	--theme-color:	#cd552c;
+	--theme-dark:	#8a3d1e;
+	--white-accent:	#ddd;
+	--black-accent:	#3c3c3c;
+	
+}

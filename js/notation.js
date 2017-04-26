@@ -1,8 +1,25 @@
+//notation
 
-function note_format(note){
-	return note + "/4"
+//globals
+var _bass_on = false
+
+//user toggles this for a different clef
+function toggle_clef(toggle){
+	if(toggle.checked)
+		_bass_on = true
+	else
+		_bass_on = false
 }
 
+//gives back vexflow format of "note/octave"
+//bass gives a different a lower octave
+function note_format(note, clef){
+	if(clef == 'treble')
+		return note + "/4"
+	if(clef == 'bass'){
+		return note + "/3"
+	}
+}
 
 function notation(){
 	
@@ -26,7 +43,20 @@ function notation(){
 	var stave = new VF.Stave(15, 30, 500);
 
 	// Add a clef and time signature.
-	stave.addClef("treble").addTimeSignature("12/4");
+	if(_bass_on){
+		stave.addClef("bass").addTimeSignature("12/4")
+		var clef = 'bass'
+		//row needs to be transposed if using bass clef
+		//var t_tone_row = multi_transpose(_tone_row.slice(),-3)
+	}
+	else{
+		stave.addClef("treble").addTimeSignature("12/4")
+		var clef = 'treble'
+		//var t_tone_row = _tone_row.slice()
+	}
+	
+	console.log("clef: "+clef)
+		
 	//stave.addClef("treble")
 
 	// Connect it to the rendering context and draw!
@@ -39,23 +69,29 @@ function notation(){
 	var twelve = 12
 	var each_note = 0
 	
+	
 	_tone_row.forEach(function(element){
 		//console.log("success: "+ each_note)
 		//console.log("tone row: " + _tone_row[each_note][1])
 		
-		
+
 		if(_tone_row[each_note][1] == '#' || _tone_row[each_note][1] == 'b' ){
 			//console.log('%cACCIDENTAL', 'background: #222; color: #FFF')
 			//console.log("format: " + note_format(_tone_row[each_note][0]))
-			notes.push(new VF.StaveNote({ keys: [note_format(_tone_row[each_note][0])], duration: "q" }).addAccidental(0, new VF.Accidental(_tone_row[each_note][1])))
-			//_tone_row[each_note][1]
+			notes.push(new VF.StaveNote({
+				clef: clef, 
+				keys: [note_format(_tone_row[each_note][0], clef)], 
+				duration: "q"
+			}).addAccidental(0, new VF.Accidental(_tone_row[each_note][1])))
 		}
 
-		
-		
+		//if note has no accidental, pass object without accidental modifier
 		if(_tone_row[each_note][1] == undefined){
-			notes.push(new VF.StaveNote({ keys: [note_format(_tone_row[each_note][0])], duration: "q" }))
-			//console.log("myUndefined!")
+			notes.push(new VF.StaveNote({
+				clef: clef, 
+				keys: [note_format(_tone_row[each_note][0], clef)],
+				duration: "q"
+			}))
 		}
 		
 		
@@ -74,5 +110,5 @@ function notation(){
 	// Render voice
 	voice.draw(context, stave);
 	
-	stave = 0
+	console.log(_tone_row)
 }
