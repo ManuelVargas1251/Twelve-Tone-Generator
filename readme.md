@@ -3,15 +3,20 @@
 ![Version](https://img.shields.io/badge/Version-1.4-blue.svg?style=flat)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
-This web application creates a random twelve tone row, it's matrix and notates it on a staff. I plan to add sound soon. Themes by [Luke Garrison](https://github.com/lag0215).
+This web application creates a random twelve tone row, it's matrix and notates it on a staff. I plan to add sound soon. 
 
-## Demo
-[View Demo](http://manuelvargas.me/Twelve-Tone-Generator/)
+Themes by [Luke Garrison](https://github.com/lag0215).
 
-## Changelog
-[View Changelog](https://github.com/ManuelVargas1251/Twelve-Tone-Generator/blob/master/changelog.md)
+## [Demo](http://manuelvargas.me/Twelve-Tone-Generator/)
+
+## [Changelog](https://github.com/ManuelVargas1251/Twelve-Tone-Generator/blob/master/changelog.md)
+
 
 ## References 
+
+* [jQuery](https://jquery.com/)
+
+* [Hover.css](http://ianlunn.github.io/Hover/)
 
 * [Animate.css](https://daneden.github.io/animate.css/)
 
