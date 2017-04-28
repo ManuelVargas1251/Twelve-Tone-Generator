@@ -5,7 +5,7 @@
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 This web application creates a random twelve tone row, it's matrix and notates it on a staff. I plan to add sound soon. 
 
-Themes by [Luke Garrison](https://github.com/lag0215).
+Themes by [Luke Garrison](https://github.com/lag0215)
 
 ## [Demo](http://manuelvargas.me/Twelve-Tone-Generator/)
 
