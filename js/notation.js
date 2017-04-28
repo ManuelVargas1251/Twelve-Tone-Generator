@@ -17,6 +17,9 @@ function note_format(note, clef){
 	if(clef == 'treble')
 		return note + "/4"
 	if(clef == 'bass'){
+		if(note=='B'){
+			return note + "/2"
+		}
 		return note + "/3"
 	}
 }

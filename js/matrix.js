@@ -1,18 +1,22 @@
 //matrix
 
+//prints state of variables before proceeding to create the matrix
 function status(){
 	console.log("%c::::::::matrix::::::::", 'background: #1c1c1c; color: #ffda55')
 	console.log("%calpha_copy: " + _alphabet_copy, "background: #1c1c1c; color: #11ee00")
 	console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #00aaff")
 }
 
-//creates clock array = alpha with a[0] starting with _tone_row's first letter
+//creates clock array = alphabet[] with a[0] starting with _tone_row's first letter
+//this is needed to find out the order of the rows in the matrix
 function create_clock(){
     
 	var clock_array = []
-	clock_array.push(_tone_row[0])	//store first element of tone row
+	clock_array.push(_tone_row[0])	//store first note of tone row
 	
 	while(clock_array.length != 12){
+        //push the next chromatic note to the clock array
+        //gives me an excuse to reuse my transpose_note() function
 		clock_array.push(transpose_note(clock_array[clock_array.length-1],1))
 	}
 	//console.log(clock_array)
@@ -22,14 +26,15 @@ function create_clock(){
 //function to transpose a note
 //value is an (+,-) int with max = 12 (octave)
 function transpose_note(note, value){
-	//address of note
+    
+	//address of note in the alphabet array
 	var index = _alphabet_copy.indexOf(note)	
 	//console.log("index: " + index)
 	
 	//modulo makes location wrap around
-	if(value > 0)
+	if(value > 0)  //positive values
 		index = (index += value) % 12
-	else{
+	else{          //negative values
 		value += 12
 		index = (index += value) % 12
 	}
