@@ -1,6 +1,6 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
 ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
-![Version](https://img.shields.io/badge/Version-1.4-blue.svg?style=flat)
+![Version](https://img.shields.io/badge/Version-1.4.1-blue.svg?style=flat)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 This web application creates a random twelve tone row, it's matrix and notates it on a staff. I plan to add sound soon. 
