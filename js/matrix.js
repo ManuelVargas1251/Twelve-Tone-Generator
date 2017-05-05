@@ -150,7 +150,7 @@ function show_matrix(){
 
 //main matrix function
 function matrix(){
-	status()			//displays arrays
+	//status()			//displays arrays
 	
 	show_matrix()	//unhide the matrix
 	

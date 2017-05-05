@@ -47,17 +47,24 @@ function load_array(){
 function tone_row(){
 	load_array()	//puts either sharps or flats in array
 
-	while(_alphabet.length){	//loop 12 times
-        
-		//random int from 0 to length of array
-		var random_address = Math.floor((Math.random()*_alphabet.length))	
-		var note = _alphabet[random_address]	//select note based on address
-		var element_id = get_element_id(_alphabet.length)	//create and store element id
-		
-		document.getElementById(element_id).innerHTML = note	//send note to html
-		_tone_row.push(note)	//store note in final array to use later
-		
-		remove_note(note)	//remove note from the alphabet array
+	if(custom == false){
+		while(_alphabet.length){	//loop 12 times
+
+			//random int from 0 to length of array
+			var random_address = Math.floor((Math.random()*_alphabet.length))	
+			var note = _alphabet[random_address]	//select note based on address
+			var element_id = get_element_id(_alphabet.length)	//create and store element id
+
+			document.getElementById(element_id).innerHTML = note	//send note to html
+			_tone_row.push(note)	//store note in final array to use later
+
+			remove_note(note)	//remove note from the alphabet array
+		}
 	}
-	//console.log("%c::done::", "color: #009A00")
+	
+	//if user input a custom row
+	if(custom == true){
+		//take user input and store it in the _tone_row
+		console.log("%c::done::", "color: #009A00")
+	}
 }

@@ -8,7 +8,9 @@ theme colors
 	#cd552c
 */
 
-
+/*
+theme variables
+*/
 :root {
 	--theme-color:	#cd552c;
 	--theme-dark:	#8a3d1e;

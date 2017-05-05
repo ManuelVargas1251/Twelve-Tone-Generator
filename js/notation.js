@@ -12,12 +12,12 @@ function toggle_clef(toggle){
 }
 
 //gives back vexflow format of "note/octave"
-//bass gives a different a lower octave
+//bass gives a lower octave
 function note_format(note, clef){
 	if(clef == 'treble')
 		return note + "/4"
 	if(clef == 'bass'){
-		if(note=='B'){
+		if(note=='B'){	//so B shows up lower in the staff
 			return note + "/2"
 		}
 		return note + "/3"
@@ -27,9 +27,10 @@ function note_format(note, clef){
 function notation(){
 	
 	//create_accidental()	//creates 
-	console.log(_tone_row)
+	//console.log(_tone_row)
 	
 	VF = Vex.Flow;
+	/***************************************************/
 	//////////
 	/* setup*/
 	//////////
@@ -69,18 +70,17 @@ function notation(){
 	
 	// Create the notes
 	var notes = []
-	var twelve = 12
-	var each_note = 0
+	var twelve = 12		//yum
+	var each_note = 0	
 	
 	
 	_tone_row.forEach(function(element){
 		//console.log("success: "+ each_note)
 		//console.log("tone row: " + _tone_row[each_note][1])
 		
-
+		//if note has either accidental, pass object with modifier
 		if(_tone_row[each_note][1] == '#' || _tone_row[each_note][1] == 'b' ){
-			//console.log('%cACCIDENTAL', 'background: #222; color: #FFF')
-			//console.log("format: " + note_format(_tone_row[each_note][0]))
+			//push alll that to notes[th]
 			notes.push(new VF.StaveNote({
 				clef: clef, 
 				keys: [note_format(_tone_row[each_note][0], clef)], 
@@ -96,9 +96,7 @@ function notation(){
 				duration: "q"
 			}))
 		}
-		
-		
-		each_note++
+		each_note++	//each and everyone
 	})
 
 
@@ -113,5 +111,5 @@ function notation(){
 	// Render voice
 	voice.draw(context, stave);
 	
-	console.log(_tone_row)
+	//console.log(_tone_row)
 }

@@ -1,8 +1,8 @@
 //sound.js
+//not ready, man
 
-
+/*
 function sound(){
-	
 	for(i=0; i < 12; i++){
 		console.log("at i:" + _tone_row[i])
 		switch(_tone_row[i]){
@@ -88,3 +88,24 @@ function sound(){
 		}
 	}
 }
+*/
+
+
+
+//function preload() {
+//	mySound = loadSound('notes/A.mp3');
+//}
+//
+//function setup() {
+//	
+//	mySound.setVolume(0.1);
+//	mySound.play();
+//}
+//
+//
+//function sound(){
+//	console.log("hey")
+//	console.log("bye")
+//	preload()
+//	setup()
+//}

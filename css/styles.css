@@ -259,6 +259,24 @@ input:checked + .slider:before {
 }
 
 
+.custom input[type="text"] {
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	transition: border 0.3s;
+	background: --white-accent;
+	
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+	
+	margin: 1px;
+}
+
+
 /*for smaller screens*/
 @media only screen and (max-width: 1400px) {
 	row {

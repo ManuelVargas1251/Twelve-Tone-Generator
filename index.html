@@ -3,6 +3,9 @@
 	<head>
 		<title>Twelve Tone Generator by Manuel Vargas</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Manuel Vargas">
+		<meta name="description" content="Creates tone row, tone matrix and notation on staff">
+		<meta name="keywords" content="twelve, tone, music, theory, row, matrix">
 		
 		<!-- my styles -->
 		<link rel="stylesheet" href="css/header.css">
@@ -14,6 +17,9 @@
 		
 		<!-- cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.min.js"></script>
 
 	</head>
 
@@ -21,7 +27,7 @@
 		
 		<div id="left-panel">
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.4.1<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.4.2<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
@@ -45,6 +51,17 @@
 					<input type="checkbox" onclick='toggle_clef(this)'>
 					<div class="slider round"></div>
 				</label><br>
+			</div>
+			
+			<!-- custom row -->	
+			<div id="settings">
+				<!--toggle name-->
+				<h3 style="display: inline; padding-left: 1em;">Custom </h3>
+				<!-- Switch-->
+				<label class="switch">
+					<input type="checkbox" onclick='toggle_custom_row(this)'>
+					<div class="slider round" style="opacity:.5;"></div>
+				</label>
 			</div>
 			
 			<br><br>
@@ -288,10 +305,12 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://unpkg.com/vexflow@1.2.83/releases/vexflow-min.js"></script>
 		
+		
 		<!-- local libraries -->
 		<script src="js/sound.js"></script>
 		<script src="js/main.js"></script>	
 		<script src="js/animations.js"></script>	
+		<script src="js/custom_row.js"></script>	
 		<script src="js/tone_row.js"></script>	
 		<script src="js/notation.js"></script>	
 		<script src="js/matrix.js"></script>		

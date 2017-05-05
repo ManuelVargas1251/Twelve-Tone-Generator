@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+## [1.4.2] - 2017-05-05
+### Added
+- custom row button
+
 ## [1.4.1] - 2017-04-26
 ### Added
 - add mp3 and wav files of note audio
@@ -103,6 +107,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.4.2]: #
 [1.4.1]: #
 [1.4]: #
 [1.3.0]: #
