@@ -22,30 +22,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * [Fixed] Cannot push note objects to Vexflow vector with and without 'accidental' modifier (not all the notes will have accidentals). If there was a way to pass the object with a null value then I could just loop with the 'accidental' modifier object. After an unsuccesful [pull request](https://github.com/0xfe/vexflow/pull/543#issuecomment-296598084), I fixed it with a workaround by testing each incoming note to see if it had an accidental and pushing a different object to the vector for natural and accidental note:
 
 ```
-		_tone_row.forEach(function(element){
-	
-		//if note has either accidental, pass object with modifier
-		if(_tone_row[i][1] == '#' || _tone_row[i][1] == 'b' ){
-			
-			//push note object with accidental modifier
-			notes.push(new VF.StaveNote({
-				clef: clef,	//clef variable calculated above
-				keys: [note_format(_tone_row[i][0], clef)],	//correct note format
-				duration: "q"	//quarter notes
-			}).addAccidental(0, new VF.Accidental(_tone_row[i][1])))
-			//adds 'accidental' modifier
-		}
+_tone_row.forEach(function(element){
 
-		//if note has no accidental, pass object without accidental modifier
-		if(_tone_row[i][1] == undefined){
-			notes.push(new VF.StaveNote({
-				clef: clef, 
-				keys: [note_format(_tone_row[i][0], clef)],
-				duration: "q"
-			}))
-		}
-		i++
-	})
+	//if note has either accidental, pass object with modifier
+	if(_tone_row[i][1] == '#' || _tone_row[i][1] == 'b' ){
+		//push note object with accidental modifier
+		notes.push(new VF.StaveNote({
+			clef: clef,	//clef variable calculated above
+			keys: [note_format(_tone_row[i][0], clef)],	//correct note format
+			duration: "q"	//quarter notes
+		}).addAccidental(0, new VF.Accidental(_tone_row[i][1])))
+		//adds 'accidental' modifier
+	}
+
+	//if note has no accidental, pass object without accidental modifier
+	if(_tone_row[i][1] == undefined){
+		notes.push(new VF.StaveNote({
+			clef: clef, 
+			keys: [note_format(_tone_row[i][0], clef)],
+			duration: "q"
+		}))
+	}
+	i++
+})
 ```
 
 ## References 
