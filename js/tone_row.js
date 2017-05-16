@@ -29,6 +29,7 @@ function toggle_accidental(toggle){
 //loads array depending on user's accidental bool preference
 function load_array(){
 	console.clear()	//only show the current tone row log
+	
     var sharps = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
     var flats = ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab']
 	_alphabet = []	//unnecessarily cleans array
@@ -44,9 +45,11 @@ function load_array(){
 	}
 }
 
+//main function for tone_row
 function tone_row(){
 	load_array()	//puts either sharps or flats in array
 
+	//if custom toggle is check (currently breaks program if true)
 	if(custom == false){
 		while(_alphabet.length){	//loop 12 times
 

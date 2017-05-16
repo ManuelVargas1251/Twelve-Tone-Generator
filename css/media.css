@@ -1,0 +1,22 @@
+/*for smaller screens*/
+@media only screen and (max-width: 1400px) {
+	row {
+		font-size: 20px;
+	}
+	#main-panel{
+		padding-left: 20px;
+		padding-top: 35px important!;
+		display: block;
+	}
+	#white-panel {
+		width:60%;
+		left:700px;
+		padding-left: 35px;
+	}
+	table {
+		font-size: 20px;
+	}
+	row {
+		display: inline;
+	}
+}
