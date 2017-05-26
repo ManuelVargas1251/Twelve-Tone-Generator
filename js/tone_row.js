@@ -1,4 +1,11 @@
-//creates random tone row
+/*
+*** tone_row.js
+
+this is the initial program
+every other process relies on this completing 
+it creates a random tone row and stores it globally in '_tone_row' array
+it also gets displayed to the screen
+*/
 
 //globals
 var _flats_on = false

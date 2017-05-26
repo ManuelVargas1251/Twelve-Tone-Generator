@@ -1,5 +1,9 @@
-//notation
-//draw the tone row on a staf using vexflow
+/*
+*** notation.js
+
+using vexflow, draws the tone row on a staff
+this takes place in the white panel
+*/
 
 //globals
 var _bass_on = false	//option to draw on bass clef

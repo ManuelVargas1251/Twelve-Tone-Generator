@@ -1,15 +1,18 @@
-/******/
-/*main*/
-/******/
+/*
+*** styles.css
 
+
+*/
+
+/* google fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* foundations */
 html{
 	font-family: Raleway, sans-serif;
 	overflow: hidden;
 	background: var(--black-accent);
 	color: var(--white-accent);
-	/*	height: 100%;*/
-	/*	padding: 15px;*/
-	/*	margin:0px;*/
 }
 
 body {
@@ -17,29 +20,18 @@ body {
 	padding:0px;
 }
 
-
-/*************/
-/*page panels*/
-/*************/
-
+/* page panels */
 #left-panel {
-/*    float: left;*/
-/*    width: 20%;*/
-/*	display: inline-block;*/
-	
 	background-color: var(--theme-color);
 	width:200px;
 	height:100%;
 	display:block;
 	position:absolute;
 	padding: 20px;
-/*	left:-200px;*/
 	top:0px;
-/*	transition:left 0.3s linear;*/
 }
 
 #main-panel {
-/*    width: 30px;*/
 	position:absolute;
 	display:inline-block;
 	left:250px;
@@ -58,11 +50,8 @@ body {
 }
 
 #settings {
-/*	background: #ddd;*/
 	padding:15px 0px;
 	border-bottom: 1px solid var(--white-accent);
-/*	border-top: 1px solid var(--white-accent);*/
-
 }
 
 

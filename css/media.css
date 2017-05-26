@@ -1,4 +1,13 @@
-/*for smaller screens*/
+/*
+*** media.css
+
+creating different views for different screen sizes
+*/
+
+
+/*default is Level 0*/
+
+/* Level 1 */
 @media only screen and (max-width: 1400px) {
 	row {
 		font-size: 20px;
@@ -19,4 +28,9 @@
 	row {
 		display: inline;
 	}
+}
+
+/* Level 2 */
+@media only screen and (max-width: 1000px) {
+
 }

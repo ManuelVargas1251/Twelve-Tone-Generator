@@ -1,5 +1,10 @@
-//animations
-//work in progress
+/*
+*** animations.js
+
+work in progress. mostly just theme changing code
+*/
+
+
 
 //function myanimations(){
 //	$(function() {

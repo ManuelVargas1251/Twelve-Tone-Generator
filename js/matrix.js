@@ -1,4 +1,9 @@
-//matrix
+/*
+*** matrix.js
+
+this figures out the correct format of note rows and 
+places them in the matrix in the main panel.
+*/
 
 //prints state of variables before proceeding to create the matrix
 function status(){

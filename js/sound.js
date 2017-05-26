@@ -1,7 +1,9 @@
-//sound.js
-//plays the tone row
-//not ready, man
+/*
+*** sound.js
 
+plays the tone row
+not ready, man
+*/
 
 
 
@@ -105,7 +107,7 @@ function sound(){
 */
 
 
-
+//p5 implementation
 //function preload() {
 //	mySound = loadSound('notes/A.mp3');
 //}

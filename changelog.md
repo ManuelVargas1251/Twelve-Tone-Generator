@@ -19,6 +19,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+
+## [1.4.4] - 2017-05-26
+### Added
+- summaries for js files
+- another css file for all future @media queries 
+
+### Changed
+- demo link updated
+- `header.css` to `theme.css`
+
+### Removed
+- excess css in `styles.css`
+
 ## [1.4.3] - 2017-05-16
 ### Added
 - added issues in `readme.md`
@@ -117,6 +130,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.4.4]: #
 [1.4.3]: #
 [1.4.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/6513a86890da59efe4e67a3d33ff77d0f8c5c6fa
 [1.4.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/d3fa8c1a9ea3b2a9bc2bec5dec10fd4f2e88fb55
