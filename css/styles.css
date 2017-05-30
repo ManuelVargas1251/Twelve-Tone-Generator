@@ -16,8 +16,8 @@ html{
 }
 
 body {
-	margin:0px;
-	padding:0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 /* page panels */
@@ -27,7 +27,7 @@ body {
 	height:100%;
 	display:block;
 	position:absolute;
-	padding: 20px;
+	padding: 0px 15px 0px;
 	top:0px;
 }
 
@@ -40,13 +40,13 @@ body {
 
 #white-panel {
 	background-color: var(--white-accent);
-	position:absolute;
-	display:block;
-	left:900px;
+	position: absolute;
+	display: block;
+	left: 900px;
 	padding-left: 20px;
-	height:100%;
-	width:60%;
-	top:0px;
+	height: 100%;
+	width: 100%;
+	top: 0px;
 }
 
 #settings {
@@ -54,6 +54,14 @@ body {
 	border-bottom: 1px solid var(--white-accent);
 }
 
+#mobile-button{
+	background-color: #cd552c;
+	display: none;
+}
+
+#mobile-header, #left-panel-btn{
+	display: none;
+}
 
 p {
 	margin: 0;
@@ -100,6 +108,7 @@ button {
     padding: 7px 22px;
 	border-radius: 10px;
 	display: inline;
+	z-index: 3;
 	/*display: inline-block;*/
 	/*margin: 20px 20px;*/
 }

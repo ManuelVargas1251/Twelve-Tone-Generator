@@ -7,7 +7,7 @@ creating different views for different screen sizes
 
 /*default is Level 0*/
 
-/* Level 1 */
+/* level 1 */
 @media only screen and (max-width: 1400px) {
 	row {
 		font-size: 20px;
@@ -30,7 +30,67 @@ creating different views for different screen sizes
 	}
 }
 
-/* Level 2 */
+/* level 2 */
 @media only screen and (max-width: 1000px) {
 
+}
+
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+
+/* level 3 - portrait */
+@media only screen and (max-width: 760px) { 
+	
+	#main-panel {
+		position: relative;
+		display: inline-block;
+		left: 0px;
+		padding-left: 35px;
+		width: 100%;
+		bottom: 50px;
+	}
+	
+	table{
+		font-size: 15px;
+	}
+	
+	/*	Create button only on mobile*/
+	#mobile-button{
+		display: block;
+		background: var(--theme-color);
+	}
+	
+	#mobile-header{
+		display: block;
+		padding-top: 42px;
+	}
+	
+	#left-panel{
+		display: block;
+		position: absolute;
+		left: -230px;
+		transition: left 0.3s linear;
+		z-index: 1;
+	}
+
+	#left-panel.visible{
+		left: 0px;
+		transition: left 0.3s linear;
+	}
+
+	#left-panel-btn{
+		display: block;
+		background: var(--theme-color);
+		vertical-align: top;
+		width: 25px;
+		cursor: pointer;
+		margin:10px 20px;
+		position: absolute;
+/*		top: 0px;*/
+		right:-48px;
+		padding: 6px;
+		border-radius: 9px;
+	}
 }

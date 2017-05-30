@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Future Additions (in order of importance)
 - Display four version of the tone row in staff notation (requires being able to clear staff through vexflow)
 - play the notes on the tone row
-- make sizing levels for site responsiveness
 - input your own tone row
 - make current row change between sharps/flats with toggle instead of waiting for next row (can't be done without vexflow issue being resolved)
 - [derived rows](https://en.wikipedia.org/wiki/Derived_row)
@@ -18,6 +17,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - vexflow staff clears and is ready for next row
+
+
+## [1.5] - 2017-05-26
+### Added
+- mobile @media queries
+- mobile side menu css
+- basic mobile UI
 
 
 ## [1.4.4] - 2017-05-26
@@ -130,6 +136,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.5]: #
 [1.4.4]: #
 [1.4.3]: #
 [1.4.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/6513a86890da59efe4e67a3d33ff77d0f8c5c6fa

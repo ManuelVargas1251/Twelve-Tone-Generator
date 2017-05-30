@@ -2,15 +2,18 @@
 <html>
 	<head>
 		<title>Twelve Tone Generator by Manuel Vargas</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Manuel Vargas">
 		<meta name="description" content="Creates tone row, tone matrix and notation on staff">
 		<meta name="keywords" content="twelve, tone, music, theory, row, matrix">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
 		
 		<!-- my styles -->
 		<link rel="stylesheet" href="css/theme.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/media.css">
+		<link rel="shortcut icon" href="">
+		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+<!--		<link rel="icon" type="image/x-icon" href="favicon.ico">-->
 		
 		<!-- animation libraries -->
 		<link rel="stylesheet" href="css/animation/animate.css">
@@ -27,8 +30,13 @@
 	<body onload="main()">
 		
 		<div id="left-panel">
+
+			<div id="left-panel-btn">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</div>
+			
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.4.3<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
@@ -90,6 +98,15 @@
 		
 		<div id="main-panel">
 			<!-- display notes--><br><br>
+			<div id="mobile-header">
+				<h1 class="animated bounceInLeft">
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5<br>
+					by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
+				</h1>
+			</div>
+			<br>
+			<button id="mobile-button" class="hvr-buzz-out" type="button" onclick="create()">Create</button><p><br>
+			
 			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong><br>
 				<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
 				<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
@@ -297,7 +314,7 @@
 				</tr>
 			</table>
 		</div>
-		
+		<br>
 		<div id="white-panel">
 			<!-- display musical staff -->
 			<div id="staff" style="display: block;"></div>
@@ -315,10 +332,22 @@
 		<script src="js/custom_row.js"></script>	
 		<script src="js/tone_row.js"></script>	
 		<script src="js/notation.js"></script>	
-		<script src="js/matrix.js"></script>		
+		<script src="js/matrix.js"></script>	
+
+		<!-- single scripts -->
+		
+		<!-- mobile menu-->
+		<script>
+			$(document).ready(function(){
+				$('#left-panel-btn').click(function(){
+					$('#left-panel').toggleClass('visible');
+					$('#mobile-button').toggleClass('visible');
+				});
+			});
+		</script>
 		
 		
-		<!--google analytics-->
+		<!--google analytics
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -329,6 +358,6 @@
 			ga('send', 'pageview');
 		
 		</script>
-		
+		-->
 	</body>
 </html>
