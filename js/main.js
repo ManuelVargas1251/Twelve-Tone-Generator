@@ -13,6 +13,7 @@ var _tone_row = [] //row to be shared with all functions
 var _alphabet = []	//will store the music alphabet; sharps or flats
 var _alphabet_copy = []	//for use in matrix
 var _hide_table = true	//wanted initial display to be clean
+var _hide_keyboard = true	//wanted initial display to be clean
 
 //when create button is clicked
 function create(){
@@ -24,4 +25,6 @@ function create(){
 	//sound()	//playes row in sequence and maybe some other stuff
 }
 
-function main(){}
+function main(){
+	
+}

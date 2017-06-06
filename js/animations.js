@@ -50,3 +50,22 @@ function show_labels(){
 	$('#hide-2').css("display", "");
 	console.log("labels")
 }
+
+
+//by default keyboard is hidden, when toggled, will show
+function show_keyboard(toggle){
+	//$('#keyboard').css("display", "block");
+	var keyboard = document.getElementById('keyboard');
+
+	if(toggle.checked){
+		console.log("check")
+		keyboard.style.display = 'block'	//show keyboard
+		_hide_table = false	//toggle the state
+	}
+	else{
+		console.log("no check")
+		keyboard.style.display = 'none';	//hide keyboard
+		_hide_table = true	//toggle the state
+	}
+
+}

@@ -19,6 +19,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - vexflow staff clears and is ready for next row
 
 
+## [1.5.1] - 2017-05-26
+### Added
+- front keyboard interface with styles and some jquery
+
+### Removed
+- favicon.ico
+
+### Changed
+- `animation/` css folder is now `external/`
+
+
 ## [1.5] - 2017-05-26
 ### Added
 - mobile @media queries
@@ -136,6 +147,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.5.1]: #
 [1.5]: #
 [1.4.4]: #
 [1.4.3]: #

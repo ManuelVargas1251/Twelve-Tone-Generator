@@ -20,8 +20,11 @@ function toggle_clef(toggle){
 //which vexflow using to place the note in the correct spot
 //bass gives a lower octave
 function note_format(note, clef){
+	
 	if(clef == 'treble')
 		return note + "/4"
+	
+	
 	
 	if(clef == 'bass'){
 		if(note=='B'){	//so B shows up lower in the staff
@@ -48,6 +51,8 @@ function notation(){
 	// Configure the rendering context.
 	renderer.resize(600, 130);
 	var context = renderer.getContext();
+//	context.clearRect(0, 0, canvas.width, canvas.height);
+	
 	context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
 
 	// Create a stave of width 400 at position 10, 40 on the canvas.
@@ -65,13 +70,15 @@ function notation(){
 		var clef = 'treble'
 		//var t_tone_row = _tone_row.slice()
 	}
-	
+
 	console.log("clef: "+clef)
 		
 	//stave.addClef("treble")
 
 	// Connect it to the rendering context and draw!
 	stave.setContext(context).draw();
+	
+	
 	
 	/*********************** end of setup **************************/
 	
