@@ -18,8 +18,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+## [1.5.2] - 2017-06-08
+### Added
+- google ads added to head
 
-## [1.5.1] - 2017-05-26
+## [1.5.1] - 2017-06-06
 ### Added
 - front keyboard interface with styles and some jquery
 
@@ -147,10 +150,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
-[1.5.1]: #
-[1.5]: #
-[1.4.4]: #
-[1.4.3]: #
+[1.5.2]: #
+[1.5.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/68e0d4ae0b3ac408f7d959bd76bdda4f277ed041
+[1.5]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/f6670c58585d4e7d5fc33428ec9f02035dcead45
+[1.4.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/60175f13dd525c353e718290fcc0c66128c313dd
+[1.4.3]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/82c6cb7a2cc54cdbdbfc0fe39567041947e14e9b
 [1.4.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/6513a86890da59efe4e67a3d33ff77d0f8c5c6fa
 [1.4.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/d3fa8c1a9ea3b2a9bc2bec5dec10fd4f2e88fb55
 [1.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/a70fa201fd150e6f30f5973beff5046f42202862

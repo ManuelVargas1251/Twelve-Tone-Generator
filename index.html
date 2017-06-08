@@ -13,28 +13,48 @@
 		<link rel="stylesheet" href="css/media.css">
 		<link rel="stylesheet" href="css/keyboard.css">
 		
-		<!-- animation libraries -->
+		<!-- externally created css libraries but local -->
 		<link rel="stylesheet" href="css/external/animate.css">
 		<link rel="stylesheet" href="css/external/hover-min.css" media="all">
 		
 		<!-- cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.min.js"></script>
+		
+		<!-- google ads -->
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-8660361209955311",
+			enable_page_level_ads: true
+		  });
+		</script>
 
 	</head>
 
 	<body onload="main()">
+		<!--
+		body is made of three sections:
+		- left panel,
+			settings
+		- main panel,
+			tone row and matric display
+		- white panel,
+			sheet music notation display
+		-->
+		
 		
 		<div id="left-panel">
-
+		
+			<!-- mobile menu button -->
 			<div id="left-panel-btn">
 				<i class="fa fa-bars" aria-hidden="true"></i>
 			</div>
 			
+			<!-- title -->
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.1<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.2<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
