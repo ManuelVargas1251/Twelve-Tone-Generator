@@ -1,8 +1,16 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
-![Version](https://img.shields.io/badge/Version-1.5.1-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.5.3-blue.svg)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 This web application creates a random twelve tone row, it's matrix, and staff notation. I plan to add sound soon.
+
+Briefly, twelve tone music is music composed using all twelve notes of the musical alphabet equally through the use of tone rows ordered on a matrix. When I was in high school music theory class we had to create our matrix by hand so I thought it'd be nice to have a nice interface that did all the work.
+
+Some famous examples:
+
+* [Bill Evans](https://www.youtube.com/watch?v=eT5ymwGHeHQ)
+
+* [Arnold Schoenberg](https://www.youtube.com/watch?v=JEY9lmCZbIc)
 
 Themes by [Luke Garrison](https://github.com/lag0215)
 
@@ -51,6 +59,8 @@ _tone_row.forEach(function(element){
 * [Vexflow](https://github.com/0xfe/vexflow)
 
 * [Creating a Twelve Tone Matrix](http://unitus.org/FULL/12tone.pdf)
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Twelve-tone_technique)
 
 * [jQuery](https://jquery.com/)
 

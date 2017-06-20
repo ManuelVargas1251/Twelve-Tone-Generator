@@ -18,6 +18,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+## [1.5.3] - 2017-06-19
+### Added
+- google font for sheet music labelings
+- retrograde and prime tone row displayed to  user
+
+### Changed
+- external css and js is now locally stored in repo
+
+### Removed
+- p5 libraries; will re-add when they are needed
+
 ## [1.5.2] - 2017-06-08
 ### Added
 - google ads added to head
@@ -150,6 +161,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.5.3]: #
 [1.5.2]: #
 [1.5.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/68e0d4ae0b3ac408f7d959bd76bdda4f277ed041
 [1.5]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/f6670c58585d4e7d5fc33428ec9f02035dcead45

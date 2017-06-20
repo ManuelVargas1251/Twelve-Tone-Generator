@@ -35,25 +35,36 @@ function note_format(note, clef){
 }
 
 //main function in notation
-function notation(){
-
-	//console.log(_tone_row)
+function draw_row(tone_row, row_label){
 	
+	console.log("tone: "+tone_row)
+	//vexflow init
 	VF = Vex.Flow;
-	/*********************** start of setup **************************/
-	//////////
-	/* setup*/
-	//////////
 	// Create an SVG renderer and attach it to the DIV element named "staff".
 	var div = document.getElementById("staff")
 	var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
 
 	// Configure the rendering context.
 	renderer.resize(600, 130);
+
 	var context = renderer.getContext();
-//	context.clearRect(0, 0, canvas.width, canvas.height);
+	const group = context.openGroup();
 	
-	context.setFont("Arial", 10, "").setBackgroundFillStyle("#eed");
+	/*
+	if(_create){
+		//context.svg.removeChild(group);
+		//context.clearRect(0, 0, 5000, 700);
+		context.svg.removeChild(group);	//clears current group
+		const group = context.openGroup();
+		//_create = false
+	}
+	_create = true
+	*/
+	
+
+	
+	
+	context.setFont("Crimson Text",16, "").setBackgroundFillStyle("#eed");
 
 	// Create a stave of width 400 at position 10, 40 on the canvas.
 	var stave = new VF.Stave(15, 30, 500);
@@ -71,9 +82,7 @@ function notation(){
 		//var t_tone_row = _tone_row.slice()
 	}
 
-	console.log("clef: "+clef)
-		
-	//stave.addClef("treble")
+	console.log("clef: " + clef)
 
 	// Connect it to the rendering context and draw!
 	stave.setContext(context).draw();
@@ -88,26 +97,26 @@ function notation(){
 	var i = 0	//counter
 	
 	
-	_tone_row.forEach(function(element){
+	tone_row.forEach(function(element){
 		//console.log("success: "+ i)
 		//console.log("tone row: " + _tone_row[i][1])
 		
 		//if note has either accidental, pass object with modifier
-		if(_tone_row[i][1] == '#' || _tone_row[i][1] == 'b' ){
+		if(tone_row[i][1] == '#' || tone_row[i][1] == 'b' ){
 			
 			//push alll that to notes[th]
 			notes.push(new VF.StaveNote({
 				clef: clef, 
-				keys: [note_format(_tone_row[i][0], clef)],	//format is given by my function
+				keys: [note_format(tone_row[i][0], clef)],	//format is given by my function
 				duration: "q"	//all notes are quarter notes
-			}).addAccidental(0, new VF.Accidental(_tone_row[i][1])))	//adds 'accidental' modifier
+			}).addAccidental(0, new VF.Accidental(tone_row[i][1])))	//adds 'accidental' modifier
 		}
 
 		//if note has no accidental, pass object without accidental modifier
 		if(_tone_row[i][1] == undefined){
 			notes.push(new VF.StaveNote({
 				clef: clef, 
-				keys: [note_format(_tone_row[i][0], clef)],
+				keys: [note_format(tone_row[i][0], clef)],
 				duration: "q"
 			}))
 		}
@@ -116,15 +125,56 @@ function notation(){
 
 
 	// Create a voice in 4/4 and add above notes
-	var voice = new VF.Voice({num_beats: twelve,  beat_value: 4});
+	var voice = new VF.Voice({
+		num_beats: twelve,
+		beat_value: 4
+	});
+	
 	voice.addTickables(notes);	//pass notes array 
 
 	// Format and justify the notes to 400 pixels.
 	var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
 
 	
-	// Render voice
+	
+	// Render voice to index.html
 	voice.draw(context, stave);
 	
-	//console.log(_tone_row)
+	context.fillText(row_label,10,50)
+	// Then close the group
+	//context.closeGroup();
+	
+	//context.svg.removeChild(group);
+}
+
+//returns the retrograde transformation of the tone row
+function retrograde(){
+	var temp = _tone_row.slice()
+	var retrograde = []
+	
+	while(temp.length)
+		retrograde.push(temp.pop())
+	console.log(retrograde)
+	return retrograde
+}
+
+//returns the inverse transformation of the tone row
+function inverse(){
+	var temp = _tone_row.slice()
+	var inverse = []
+	
+	
+	console.log(_tone_row)
+	return inverse
+}
+
+
+
+
+//draw tone row plus 3 transformations
+function notation(){
+	draw_row(_tone_row, "Prime")
+	draw_row(retrograde(), "Retrograde")
+	//draw_row(inverse(), "Inverse")
+	//draw_row(retrograde_inverse(), "Retrograde Inverse")
 }

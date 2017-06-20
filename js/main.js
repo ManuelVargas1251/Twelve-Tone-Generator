@@ -11,9 +11,16 @@ read the readme.md for more info
 //globals
 var _tone_row = [] //row to be shared with all functions
 var _alphabet = []	//will store the music alphabet; sharps or flats
-var _alphabet_copy = []	//for use in matrix
+var _alphabet_copy = []	//for use in matrix / this will change!
+
+///booleans
 var _hide_table = true	//wanted initial display to be clean
 var _hide_keyboard = true	//wanted initial display to be clean
+var _create = false
+
+
+
+
 
 //when create button is clicked
 function create(){
@@ -26,5 +33,4 @@ function create(){
 }
 
 function main(){
-	
 }
