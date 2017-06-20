@@ -23,7 +23,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Issues
-* [Vexflow](https://github.com/0xfe/vexflow) doesn't have a clear way to write over it's own canvas. I created an [issue](https://github.com/0xfe/vexflow/issues/546) with them and they seem just as interested as I am about it.
 
 * need a way to make inputting notes look clean and fit in the current design
 
