@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Display four version of the tone row in staff notation (requires being able to clear staff through vexflow)
 - play the notes on the tone row
 - input your own tone row
-- make current row change between sharps/flats with toggle instead of waiting for next row (can't be done without vexflow issue being resolved)
+- make current row change between sharps/flats with a different toggle 
 - [derived rows](https://en.wikipedia.org/wiki/Derived_row)
 - [combinatoriality](https://en.wikipedia.org/wiki/Combinatoriality)
 - play the notes on the matrix by hovering
@@ -17,6 +17,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - vexflow staff clears and is ready for next row
+
+## [1.5.4] - 2017-08-06
+### Added
+- my own twelve tone composition from high school as an example
+
+### Changed 
+- changed how tone row uses alphbet so it is truly a reusable global variable; using `.slice()`
+- console log prints start and completion of each main function
+- used a `for each` loops correctly in notation
+- default theme color changed
+- updated `readme.md` summary
+
+### Removed
+- duplicate alphabet array
 
 ## [1.5.3] - 2017-06-19
 ### Added
@@ -161,6 +175,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.5.4]: #
 [1.5.3]: #
 [1.5.2]: #
 [1.5.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/68e0d4ae0b3ac408f7d959bd76bdda4f277ed041

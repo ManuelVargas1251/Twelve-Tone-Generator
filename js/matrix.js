@@ -8,7 +8,7 @@ places them in the matrix in the main panel.
 //prints state of variables before proceeding to create the matrix
 function status(){
 	console.log("%c::::::::matrix::::::::", 'background: #1c1c1c; color: #ffda55')
-	console.log("%calpha_copy: " + _alphabet_copy, "background: #1c1c1c; color: #11ee00")
+	//console.log("%calpha_copy: " + _alphabet_copy, "background: #1c1c1c; color: #11ee00")
 	console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #00aaff")
 }
 
@@ -33,7 +33,7 @@ function create_clock(){
 function transpose_note(note, value){
     
 	//address of note in the alphabet array
-	var index = _alphabet_copy.indexOf(note)	
+	var index = _alphabet.indexOf(note)	
 	//console.log("index: " + index)
 	
 	//modulo makes location wrap around
@@ -45,7 +45,7 @@ function transpose_note(note, value){
 	}
 
 	//console.log("new index: " + index)
-	return note = _alphabet_copy[index]
+	return note = _alphabet[index]
 }
 
 //transpose an array of notes all by the same value
@@ -130,7 +130,7 @@ function generate_matrix(clock_array){
 			//document.getElementById(table_id).addClass('animated tada')
 			$(table_id).toggleClass('animated tada');
 
-			console.log("sending:")
+			//console.log("sending:")
 			column_index++
 		}
 		//console.log("hey")
@@ -153,12 +153,23 @@ function show_matrix(){
 		
 }
 
+//hides main-panel initially
+//should move to matrix function
+function show_labels(){
+	$('#hide-1').css("display", "");
+	$('#hide-2').css("display", "");
+	//console.log("labels")
+}
+
 //main matrix function
 function matrix(){
-	//status()			//displays arrays
+	console.log("%cmatrix(): \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
 	
+	//status()			//displays arrays
+	show_labels() 	//show matrix labels
 	show_matrix()	//unhide the matrix
 	
     //creates new alpha array based on the tone row and pass
 	generate_matrix(create_clock())	//generates and populates matrix
+	console.log("%cmatrix(): \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
 }

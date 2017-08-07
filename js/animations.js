@@ -21,6 +21,7 @@ document.getElementById('poupon').onclick = switch_poupon;
 document.getElementById('pistacio').onclick = switch_pistacio;
 document.getElementById('autumn').onclick = switch_autumn;
 
+
 //if there were more color options it might be better to write one switch function
 //passing in the name of the color and using it as an object, color.hex?
 function switch_wave(){
@@ -41,14 +42,6 @@ function switch_pistacio(){
 function switch_autumn(){
 	$(':root').get(0).style.setProperty('--theme-color', '#cd552c');
 	$(':root').get(0).style.setProperty('--theme-dark', '#8a3d1e');
-}
-
-//hides main-panel initially
-//should move to matrix function
-function show_labels(){
-	$('#hide-1').css("display", "");
-	$('#hide-2').css("display", "");
-	console.log("labels")
 }
 
 

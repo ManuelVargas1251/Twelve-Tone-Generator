@@ -12,8 +12,8 @@ theme colors:
 
 /* theme variables */
 :root {
-	--theme-color:	#cd552c;	/*default theme color*/
-	--theme-dark:	#8a3d1e;
+	--theme-color:	#55aad1;	/*default theme color*/
+	--theme-dark:	#3f789e;	/*default dark theme color*/
 	--white-accent:	#eee;
 	--black-accent:	#3c3c3c;
 }

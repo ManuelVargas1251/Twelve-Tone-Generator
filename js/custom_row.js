@@ -1,7 +1,7 @@
 /*
 *** custom_row.js
 
-use inputs a tone row and gets passed to every other function.
+user inputs a tone row and gets passed to every other function.
 */
 
 var custom = false	//by default custom row is off
