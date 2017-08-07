@@ -4,7 +4,7 @@
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 This web application creates a random twelve tone row, it's matrix, and staff notation. I plan to add sound soon.
 
-Twelve tone music is music composed using all twelve notes of the musical alphabet equally. You do this by creating your own order of the twelve notes called a [tone row](https://en.wikipedia.org/wiki/Tone_row) and creating [transformations](https://en.wikipedia.org/wiki/Transformation_(music) which are then placed in a matrix. You then are free to write your composition based on the matrix. When I was in high school music theory class we had to create our matrix by hand so I thought it'd be nice to have an interface that did all the work.
+Twelve tone music is music composed using all twelve notes of the musical alphabet equally. You do this by creating your own order of the twelve notes called a [tone row](https://en.wikipedia.org/wiki/Tone_row) and creating [transformations](https://en.wikipedia.org/wiki/Transformation_(music)) which are then placed in a matrix. You then are free to write your composition based on the matrix. When I was in high school music theory class we had to create our matrix by hand so I thought it'd be nice to have an interface that did all the work.
 
 Some notable examples:
 
