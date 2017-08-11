@@ -14,6 +14,7 @@ function toggle_clef(toggle){
 		_bass_on = true
 	else
 		_bass_on = false
+	console.log("bass on: "+_bass_on)
 }
 
 //gives back vexflow format of "note/octave"
