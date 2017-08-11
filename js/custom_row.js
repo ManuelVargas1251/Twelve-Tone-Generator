@@ -13,6 +13,7 @@ function toggle_custom_row(toggle){
 		custom = true
 	else
 		custom = false
+	console.log("custom: " + custom)
 }
 
 function custom_row(){

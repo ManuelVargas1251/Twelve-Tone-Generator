@@ -21,9 +21,12 @@ function toggle_clef(toggle){
 //bass gives a lower octave
 function note_format(note, clef){
 	
-	if(clef == 'treble')
+	if(clef == 'treble'){
+		if(note == 'C' || note == 'Db' || note == 'D' || note == 'C#'){
+			return note + "/5"
+		}
 		return note + "/4"
-
+	}
 	else if(clef == 'bass'){
 		if(note=='B'){	//so B shows up lower in the staff
 			return note + "/2"
@@ -33,14 +36,14 @@ function note_format(note, clef){
 }
 
 //main function in notation
-function draw_row(tone_row, row_label){
+function draw_row(tone_row, row_label, staff){
 	
 	console.log(row_label+": "+tone_row)	//print current working row
 	
 	//vexflow init
 	VF = Vex.Flow;
 	// Create an SVG renderer and attach it to the DIV element named "staff".
-	var div = document.getElementById("staff")
+	var div = document.getElementById(staff)
 	var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
 
 	// Configure the rendering context.
@@ -194,17 +197,15 @@ function inverse(){
 	return ['A','A#','A','A#','A','A#','A','A#','A','A#']
 }
 
-
-
-
 //draw tone row plus 3 transformations
 function notation(){
-	console.log("%cnotation(): \t%cstart", "color: deeppink;font-weight:bold;", "color: orange")
+	console.log("%cnotation(): \t%cstart", "color: deeppink;font-weight:bold;", "color: orange");
 	
-	draw_row(_tone_row, "Prime")
-	draw_row(retrograde(), "Retrograde")
-	//draw_row(inverse(), "Inverse")
-	//draw_row(retrograde_inverse(), "Retrograde Inverse")
+	//draw the notation of all four rows
+	draw_row(_tone_row, "Prime", "staff_1")
+	draw_row(retrograde(), "Retrograde", "staff_2")
+	//draw_row(inverse(), "Inverse", "staff_3")
+	//draw_row(retrograde_inverse(), "Retrograde Inverse", "staff_4")
 	
 	console.log("%cnotation(): \t%cdone", "color: deeppink; font-weight:bold;", "color: limegreen")
 }

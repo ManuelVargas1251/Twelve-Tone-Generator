@@ -278,3 +278,11 @@ input:checked + .slider:before {
 	
 	margin: 1px;
 }
+#staff_1{
+    position: relative;
+	z-index: 4;
+}
+#staff_2{
+    position: relative;
+	z-index: 4;
+}

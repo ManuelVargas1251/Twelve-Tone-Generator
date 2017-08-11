@@ -62,3 +62,12 @@ function show_keyboard(toggle){
 	}
 
 }
+
+function clean_staves() {
+	$("#staff_1").empty();
+	$("#staff_2").empty();
+	$("#staff_3").empty();
+	$("#staff_4").empty();
+}
+
+	

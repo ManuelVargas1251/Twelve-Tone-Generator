@@ -66,11 +66,20 @@ function tone_row(){
 	if(custom == true){
 		//take user input and store it in the _tone_row
 		console.log("%c::custom row?::", "color: #009A00")
+		
+		//test row 
+		if(_flats_on == true){
+			_tone_row = ['B','Bb','G','Db','Eb','C','D','A','Gb','E','Ab','F']
+		}
+		else{
+			_tone_row = ['B','A#','G','C#','D#','C','D','A','F#','E','G#','F']
+		}
+		console.log("tone row (inner): " + _tone_row)
 	}
 	else{
 		for(var i = 12 ; i > 0 ; i--){
 			//random int from 0 to length of array
-			var random_address = Math.floor((Math.random()*i))	
+			var random_address = Math.floor((Math.random() * i ))	
 			var note = shrinking_alphabet[random_address]	//select note based on address
 			var element_id = get_element_id(i)	//create and store element id
 
@@ -82,5 +91,6 @@ function tone_row(){
 		}
 	}
 	
+	console.log("tone row: " + _tone_row)
 	console.log("%ctone_row(): \t%cdone", "color: blue; font-weight:bold;", "color: limegreen")
 }

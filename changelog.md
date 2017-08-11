@@ -18,14 +18,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - vexflow staff clears and is ready for next row
 
+## [1.5.5] - 2017-08-11
+### Added
+- flat and sharp test rows for custom row testing
+
+### Fixed
+- staves now clear out every single time the `create()` function is called
+- custom row toggle doesn't break program
+
+### Changed
+- treble clef notes will stay in the staff (less ledger lines notes)
+- added staff div name as parameter to staff draw function `draw_row(row,transformation,staff)`
+- renamed mp3 note files
+
 ## [1.5.4] - 2017-08-06
 ### Added
 - my own twelve tone composition from high school as an example
+- keyboard for custom row (will replace)
 
 ### Changed 
 - changed how tone row uses alphbet so it is truly a reusable global variable; using `.slice()`
 - console log prints start and completion of each main function
-- used a `for each` loops correctly in notation
+- used a `forEach` loops correctly in `notation.js`
 - default theme color changed
 - updated `readme.md` summary
 
@@ -175,6 +189,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.5.5]: #
 [1.5.4]: #
 [1.5.3]: #
 [1.5.2]: #

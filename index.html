@@ -37,7 +37,7 @@
 			
 			<!-- title -->
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.4<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.5<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
@@ -58,7 +58,7 @@
 			<div id="settings">
 				<h3 style="display: inline; padding-left: 1em;">Bass </h3>
 				<label class="switch">
-					<input type="checkbox" onclick='toggle_clef(this)'>
+					<input type="checkbox" onclick='toggle_custom_row(this)'>
 					<div class="slider round"></div>
 				</label><br>
 			</div>
@@ -69,7 +69,7 @@
 				<h3 style="display: inline; padding-left: 1em;">Custom </h3>
 				<!-- Switch-->
 				<label class="switch">
-					<input type="checkbox" onclick='show_keyboard(this)'>
+					<input type="checkbox" onclick='toggle_custom_row(this)'>
 					<div class="slider round" style="opacity:.5;"></div>
 				</label>
 			</div>
@@ -142,7 +142,7 @@
 			<!-- display notes--><br><br>
 			<div id="mobile-header">
 				<h1 class="animated bounceInLeft">
-					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.4<br>
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.5.5<br>
 					by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
 				</h1>
 			</div>
@@ -359,7 +359,10 @@
 		<br>
 		<div id="white-panel">
 			<!-- display musical staff -->
-			<div id="staff" style="display: block; position: fixed;"></div>
+			<div id="staff_1" style="display: block;"></div>
+			<div id="staff_2" style="display: block;"></div>
+			<div id="staff_3" style="display: block;"></div>
+			<div id="staff_4" style="display: block;"></div>
 		</div>
 		
 		<!-- external libraries -->

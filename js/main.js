@@ -18,6 +18,8 @@ var _hide_keyboard = true	//wanted initial display to be clean
 //runs when create button is clicked
 function create(){
 	console.clear()	//removes previous log if one exists
+	clean_staves()	//removes content in staff divs
+	
 	//custom_row()	//user can input their own tone row instead of random
 	tone_row()	//creates random row
 	matrix()	//creates/displays matrix based on row
