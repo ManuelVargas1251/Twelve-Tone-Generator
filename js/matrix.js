@@ -102,6 +102,7 @@ function generate_matrix(clock_array){
         //once we know the address for the note, we can subtract it from 12 and that will
         //give us which tranposition array we should compute
         //do this for the entire tone row
+		//these variables all need to be given better names
         var letter = _tone_row[row_index]
         var letter_address = get_letter_address(clock_array.slice(), letter)
         var y_letter = 12 - letter_address
@@ -117,6 +118,8 @@ function generate_matrix(clock_array){
 		//console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #dadaff")
 		//console.log("transposed array: " + trans_array)
 		
+		//inverse row gets loaded from first index of every transposed row
+		_inverse.push(trans_array[0]);
 		
 		/********** 12 notes **********/
 		while(column_index != 13){
@@ -128,7 +131,7 @@ function generate_matrix(clock_array){
 			document.getElementById(table_id).innerHTML = trans_array[actual_index]	//send note to html
 			
 			//document.getElementById(table_id).addClass('animated tada')
-			$(table_id).toggleClass('animated tada');
+			//$(table_id).toggleClass('animated tada');
 
 			//console.log("sending:")
 			column_index++
@@ -137,6 +140,8 @@ function generate_matrix(clock_array){
 		row_index++
 		column_index = 1
 	}
+	
+	//console.log("inverse: "+_inverse)
 }
 
 

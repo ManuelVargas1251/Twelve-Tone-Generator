@@ -6,17 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Future Additions (in order of importance)
-- Display four version of the tone row in staff notation (requires being able to clear staff through vexflow)
-- play the notes on the tone row
 - input your own tone row
+- play the notes on the tone row
 - make current row change between sharps/flats with a different toggle 
 - [derived rows](https://en.wikipedia.org/wiki/Derived_row)
 - [combinatoriality](https://en.wikipedia.org/wiki/Combinatoriality)
 - play the notes on the matrix by hovering
 - decide length of notes
 
-### Fixed
-- vexflow staff clears and is ready for next row
+## [1.6] - 2017-08-12
+### Added
+- tone row and all three transformations are notated
+- inverse tone row global variable
+
+### Changed
+- `animations.js` to `theme.js` to match content; moved function to appropriate files
+
+### Removed
+- excess code from notation from failed solutions 
 
 ## [1.5.5] - 2017-08-11
 ### Added
@@ -189,10 +196,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
-[1.5.5]: #
-[1.5.4]: #
-[1.5.3]: #
-[1.5.2]: #
+[1.6]: #
+[1.5.5]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/754f0ee1d8cf3ced8db90bb1f7bc51aa0f02bf23
+[1.5.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/fc2406fddaa9d1d604b59b08f9cec2a378bf97d4
+[1.5.3]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/3d7fecfe2e34de47ba45aa65b43f3b8eaa465ff4
+[1.5.2]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/36236b238b9902d3d41a46e3da9e7f998aefc858
 [1.5.1]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/68e0d4ae0b3ac408f7d959bd76bdda4f277ed041
 [1.5]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/f6670c58585d4e7d5fc33428ec9f02035dcead45
 [1.4.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/60175f13dd525c353e718290fcc0c66128c313dd

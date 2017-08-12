@@ -11,7 +11,7 @@ read the readme.md for more info
 //globals
 var _tone_row = [] //row to be shared with all functions
 var _alphabet = []	//will store the music alphabet; sharps or flats
-var _alphabet_copy = []	//for use in matrix / this will change!
+var _inverse = []	//store tone row's inverse array; used in matrix()
 var _hide_table = true	//wanted initial display to be clean
 var _hide_keyboard = true	//wanted initial display to be clean
 

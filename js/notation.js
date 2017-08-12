@@ -14,7 +14,6 @@ function toggle_clef(toggle){
 		_bass_on = true
 	else
 		_bass_on = false
-	console.log("bass on: "+_bass_on)
 }
 
 //gives back vexflow format of "note/octave"
@@ -39,7 +38,7 @@ function note_format(note, clef){
 //main function in notation
 function draw_row(tone_row, row_label, staff){
 	
-	console.log(row_label+": "+tone_row)	//print current working row
+	//console.log(row_label+": "+tone_row)	//print current working row
 	
 	//vexflow init
 	VF = Vex.Flow;
@@ -53,22 +52,6 @@ function draw_row(tone_row, row_label, staff){
 	var context = renderer.getContext();
 	const group = context.openGroup();
 	context.setFont("Crimson Text",16, "").setBackgroundFillStyle("#eed");
-	
-	/*
-	if(_create){
-		//context.svg.removeChild(group);
-		//context.clearRect(0, 0, 5000, 700);
-		context.svg.removeChild(group);	//clears current group
-		const group = context.openGroup();
-		//_create = false
-	}
-	_create = true
-	*/
-	
-
-	
-	
-	
 
 	// Create a stave of width 400 at position 10, 40 on the canvas.
 	var stave = new VF.Stave(15, 30, 500);
@@ -87,12 +70,9 @@ function draw_row(tone_row, row_label, staff){
 	}
 
 	//console.log("clef: " + clef)
-
 	// Connect it to the rendering context and draw!
 	stave.setContext(context).draw();
-	
-	
-	
+
 	/*********************** end of setup **************************/
 	
 	//creating notes array for note objects to be pushed
@@ -135,21 +115,22 @@ function draw_row(tone_row, row_label, staff){
 	// Format and justify the notes to 400 pixels.
 	var formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
 
-	
-	
 	// Render voice to index.html
 	voice.draw(context, stave);
 	
 	context.fillText(row_label,10,50)
-	// Then close the group
-	//context.closeGroup();
-	
-	//context.svg.removeChild(group);
+}
+
+function clean_staves() {
+	$("#staff_1").empty();
+	$("#staff_2").empty();
+	$("#staff_3").empty();
+	$("#staff_4").empty();
 }
 
 //returns the retrograde transformation of the tone row
-function retrograde(){
-	var temp = _tone_row.slice()
+function retrograde(my_row){
+	var temp = my_row
 	var retrograde = []
 	
 	while(temp.length)
@@ -158,55 +139,15 @@ function retrograde(){
 	return retrograde
 }
 
-function find_interval(note_1, note_2){
-	console.log(_alphabet_copy)	//I should not have a copy of alphabet; it should not be changed
-	var location_1, location_2
-	
-	console.log("note 1: "+note_1)
-	console.log("note 2: "+note_2)
-	
-	for (var i = 0; i < _alphabet_copy.length; i++) {
-		if (_alphabet_copy[i] == note_1) {
-			location_1 = i
-		}
-		else if (_alphabet_copy[i] == note_2) {
-			location_2 = i
-		}
-	}
-	
-	console.log("loc 1: "+location_1)
-	console.log("loc 2: "+location_2)
-	
-	
-	return 5
-}
-
-//returns the inverse transformation of the tone row
-function inverse(){
-	var temp = _tone_row.slice()
-	var inverse = []
-	
-	inverse[0] = temp[0]	//set first location to be the same
-	var j=0
-	//for(var i=1;i<11;i++){
-		
-		//j = i+1
-		var interval = (find_interval(temp[0],temp[0]))	//find interval between notes
-		
-	//}
-	
-	return ['A','A#','A','A#','A','A#','A','A#','A','A#']
-}
-
 //draw tone row plus 3 transformations
 function notation(){
 	console.log("%cnotation(): \t%cstart", "color: deeppink;font-weight:bold;", "color: orange");
 	
 	//draw the notation of all four rows
 	draw_row(_tone_row, "Prime", "staff_1")
-	draw_row(retrograde(), "Retrograde", "staff_2")
-	//draw_row(inverse(), "Inverse", "staff_3")
-	//draw_row(retrograde_inverse(), "Retrograde Inverse", "staff_4")
+	draw_row(retrograde(_tone_row.slice()), "Retrograde", "staff_2")
+	draw_row(_inverse, "Inverse", "staff_3")
+	draw_row(retrograde(_inverse), "Retrograde Inverse", "staff_4")
 	
 	console.log("%cnotation(): \t%cdone", "color: deeppink; font-weight:bold;", "color: limegreen")
 }

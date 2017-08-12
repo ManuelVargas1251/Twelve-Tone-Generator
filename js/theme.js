@@ -1,18 +1,9 @@
 /*
-*** animations.js
+*** theme.js
 
-work in progress. mostly just theme changing code
+theme colors change here
 */
 
-
-
-//function myanimations(){
-//	$(function() {
-//		if ($('#1-1')){
-//			console.log("test")
-//		}
-//	});
-//}
 
 //theme color switch
 //when pressed, switch theme colors
@@ -43,31 +34,3 @@ function switch_autumn(){
 	$(':root').get(0).style.setProperty('--theme-color', '#cd552c');
 	$(':root').get(0).style.setProperty('--theme-dark', '#8a3d1e');
 }
-
-
-//by default keyboard is hidden, when toggled, will show
-function show_keyboard(toggle){
-	//$('#keyboard').css("display", "block");
-	var keyboard = document.getElementById('keyboard');
-
-	if(toggle.checked){
-		console.log("check")
-		keyboard.style.display = 'block'	//show keyboard
-		_hide_table = false	//toggle the state
-	}
-	else{
-		console.log("no check")
-		keyboard.style.display = 'none';	//hide keyboard
-		_hide_table = true	//toggle the state
-	}
-
-}
-
-function clean_staves() {
-	$("#staff_1").empty();
-	$("#staff_2").empty();
-	$("#staff_3").empty();
-	$("#staff_4").empty();
-}
-
-	

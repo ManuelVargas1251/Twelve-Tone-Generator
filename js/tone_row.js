@@ -21,8 +21,8 @@ function remove_note(note, alphabet){
 //returns current element id string
 function get_element_id(array_length){
 	str = "note_"
-	num = 12-array_length
-	return element_id =  str.concat(num.toString())
+	//num = 12-array_length
+	return element_id =  str.concat(array_length.toString())
 }
 
 //switches based on user input to which accidental array gets used
@@ -81,16 +81,25 @@ function tone_row(){
 			//random int from 0 to length of array
 			var random_address = Math.floor((Math.random() * i ))	
 			var note = shrinking_alphabet[random_address]	//select note based on address
-			var element_id = get_element_id(i)	//create and store element id
-
+			
+			//create and store element id
 			//send note to html
-			document.getElementById(element_id).innerHTML = note	
-			_tone_row.push(note)	//store note in final array to use later
-
-			remove_note(note, shrinking_alphabet)	//remove note from the alphabet array
+			//document.getElementById(get_element_id(i)).innerHTML = note
+			
+			//store note in final array to use later
+			_tone_row.push(note)	
+			
+			//remove current note from current alphabet array
+			remove_note(note, shrinking_alphabet)
 		}
 	}
 	
-	console.log("tone row: " + _tone_row)
+	//regardless of what happened, print tone row to #main-panel
+	_tone_row.forEach(function(tone){
+		document.getElementById(get_element_id(_tone_row.indexOf(tone))).innerHTML = tone;
+	})
+	
+	
+	//console.log("tone row: " + _tone_row)
 	console.log("%ctone_row(): \t%cdone", "color: blue; font-weight:bold;", "color: limegreen")
 }
