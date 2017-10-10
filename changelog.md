@@ -5,8 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-### Future Additions (in order of importance)
+### Future Additions
 - input your own tone row
+- swap note stem up or down
 - play the notes on the tone row
 - make current row change between sharps/flats with a different toggle 
 - [derived rows](https://en.wikipedia.org/wiki/Derived_row)
@@ -19,7 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - overall UI padding
 - clean up
 - updated `readme.md` screenshot
-- rename my song
+- renamed my song
+- trying to lowercase license file
 
 ## [1.6] - 2017-08-12
 ### Added
