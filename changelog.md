@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - overall UI padding
 - clean up
 - updated `readme.md` screenshot
+- rename my song
 
 ## [1.6] - 2017-08-12
 ### Added
