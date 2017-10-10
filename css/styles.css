@@ -10,10 +10,13 @@
 
 /* foundations */
 html{
-	font-family: Raleway, sans-serif;
-	overflow: hidden;
+	--padding-top: 10px;		/* global top padding */
+	
 	background: var(--black-accent);
 	color: var(--white-accent);
+	
+	font-family: Raleway, sans-serif;
+	overflow: hidden;
 }
 
 body {
@@ -24,25 +27,32 @@ body {
 /* page panels */
 #left-panel {
 	background-color: var(--theme-color);
+	padding-top: var(--padding-top);
+	
 	width:200px;
 	height:100%;
 	display:block;
 	position:absolute;
-	padding-left: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #main-panel {
-	position:absolute;
-	display:inline-block;
-	left:250px;
-	padding-left: 50px;
+	padding-top: var(--padding-top);
+	
+	position:	absolute;
+	display:	inline-block;
+	left:	255px;
+	padding-left: 20px;
 }
 
 #white-panel {
 	background-color: var(--white-accent);
+	padding-top: var(--padding-top);
+	
 	position: absolute;
 	display: block;
-	left: 900px;
+	left: 850px;
 	padding-left: 20px;
 	height: 100%;
 	width: 100%;
@@ -160,6 +170,7 @@ i {
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
+
 /* The slider */
 .slider {
 	position: absolute;
@@ -206,8 +217,10 @@ input:checked + .slider:before {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
   overflow: hidden;
 }
+
 #color-switcher li {
   	float: left;
 /*  width: 30px;*/
