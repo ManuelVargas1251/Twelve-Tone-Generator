@@ -1,10 +1,12 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
-![Version](https://img.shields.io/badge/Version-1.6-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.6.1-blue.svg)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
-This web application creates a random twelve tone row, it's matrix, and staff notation. I plan to add sound soon.
+[View Demo](http://mnl.space/Twelve-Tone-Generator/)
 
-Twelve tone music is music composed using all twelve notes of the musical alphabet equally. You do this by creating your own order of the twelve notes called a [tone row](https://en.wikipedia.org/wiki/Tone_row) and creating [transformations](https://en.wikipedia.org/wiki/Transformation_(music)) which are then placed in a matrix. You then are free to write your composition based on the matrix. When I was in high school music theory class we had to create our matrix by hand so I thought it'd be nice to have an interface that did all the work.
+This web application creates a random twelve tone row, it's matrix, and staff notation. I plan to add sound soon. I wanted to see how well [Automatic Semicolon Insertion](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-rules-of-automatic-semicolon-insertion) works so this entire project tries to be semicolon free.
+
+Twelve tone music is music composed using all twelve notes of the musical alphabet equally. You create compositions by creating your own arrangement of the twelve notes called a [tone row](https://en.wikipedia.org/wiki/Tone_row) and creating [transformations](https://en.wikipedia.org/wiki/Transformation_(music)) which are then placed in a matrix. You then are free to write your composition based on the matrix. When I was in high school music theory class we had to create our matrix by hand so I thought it'd be nice to have an interface that did all the work.
 
 Some notable examples:
 
@@ -16,7 +18,8 @@ And my own [composition](notes/third_resolving_down_by_manuel_vargas.mp3) from h
 
 Special thanks to [Luke Garrison](https://github.com/lag0215) for the themes. 
 
-## [Demo](http://mnl.space/Twelve-Tone-Generator/)
+
+## User Interface
 
 ![ttg](screenshot.png)
 
@@ -25,8 +28,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Issues
-
-* need a way to make inputting notes look clean and fit in the current design
 
 * [Fixed] Cannot push note objects to Vexflow vector with and without 'accidental' modifier (not all the notes will have accidentals). If there was a way to pass the object with a null value then I could just loop with the 'accidental' modifier object. After an unsuccesful [pull request](https://github.com/0xfe/vexflow/pull/543#issuecomment-296598084), I fixed it with a workaround by testing each incoming note to see if it had an accidental and pushing a different object to the vector for natural and accidental note:
 

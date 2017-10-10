@@ -10,10 +10,13 @@
 
 /* foundations */
 html{
-	font-family: Raleway, sans-serif;
-	overflow: hidden;
+	--padding-top: 10px;		/* global top padding */
+	
 	background: var(--black-accent);
 	color: var(--white-accent);
+	
+	font-family: Raleway, sans-serif;
+	overflow: hidden;
 }
 
 body {
@@ -24,35 +27,40 @@ body {
 /* page panels */
 #left-panel {
 	background-color: var(--theme-color);
+	padding-top: var(--padding-top);
+	
 	width:200px;
 	height:100%;
 	display:block;
 	position:absolute;
-	padding: 0px 15px 0px;
-	top:0px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #main-panel {
-	position:absolute;
-	display:inline-block;
-	left:250px;
-	padding-left: 50px;
+	padding-top: var(--padding-top);
+	
+	position:	absolute;
+	display:	inline-block;
+	left:	255px;
+	padding-left: 20px;
 }
 
 #white-panel {
 	background-color: var(--white-accent);
+	padding-top: var(--padding-top);
+	
 	position: absolute;
 	display: block;
-	left: 900px;
+	left: 850px;
 	padding-left: 20px;
 	height: 100%;
 	width: 100%;
 	top: 0px;
 }
 
-#settings {
-	padding:15px 0px;
-	border-bottom: 1px solid var(--white-accent);
+#settings-option {
+	padding: 8px 0px;
 }
 
 #mobile-button{
@@ -95,7 +103,7 @@ k {
 button {
 	/*text*/
 	font-family: Raleway, sans-serif;
-	font-size: 20px;
+	font-size: 1em;
 	text-decoration: none;
 	color: var(--white-accent);
 	text-align: center;
@@ -105,25 +113,22 @@ button {
 	outline: none;
 	background: var(--white-accent);
 	border: none;
-	background-color: var(--black-accent);	/* mean green? */
+	background-color: var(--black-accent);
     padding: 7px 22px;
-	border-radius: 10px;
+	border-radius: 20px;
 	display: inline;
 	z-index: 3;
-	/*display: inline-block;*/
-/*	margin: 20px 20px;*/
 }
 
 /*********/
 /* Table */
 /*********/
 table {
-/*	width : 120 px;*/
-/*	width: 80 px;*/
-	border-collapse: collapse;	/* causing extra border problem */
+	border-collapse: collapse;
 	font-size: 30px;
 	
 }
+
 th, td {
    border: 1px solid var(--white-accent); 
 }
@@ -141,26 +146,6 @@ tr:nth-child(even) {
 .hoverTable tr:hover {
 	background-color: var(--theme-color);
 }
-/*
-td, th {
-  position: relative;
-}
-td:hover::after,
-th:hover::after{
-  content: "\00a0";
-  position: absolute;
-  background-color: #2859a3;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
-}
-
-table {
-  overflow: hidden;
-}
-*/
 
 #matrix {
 	display: none;
@@ -169,7 +154,6 @@ table {
 i {
 	margin:10px;
 }
-
 
 /**************************************************/
 /*toggle box*/
@@ -180,12 +164,13 @@ i {
 	width: 54px;
 	height: 25px;
 	float: right;
-	margin-right: 30px;
+	margin-right: 10px;
 	border-radius: 50px;
 /*	border: 2px solid var(--theme-dark);*/
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
+
 /* The slider */
 .slider {
 	position: absolute;
@@ -228,15 +213,14 @@ input:checked + .slider:before {
 	border-radius: 50%;
 }
 
-
-
-
 #color-switcher {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
   overflow: hidden;
 }
+
 #color-switcher li {
   	float: left;
 /*  width: 30px;*/
@@ -261,7 +245,6 @@ input:checked + .slider:before {
   background: #cd552c;
 }
 
-
 .custom input[type="text"] {
 	padding: 10px;
 	border: none;
@@ -275,14 +258,5 @@ input:checked + .slider:before {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
-	
 	margin: 1px;
-}
-#staff_1{
-    position: relative;
-	z-index: 4;
-}
-#staff_2{
-    position: relative;
-	z-index: 4;
 }

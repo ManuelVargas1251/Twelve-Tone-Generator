@@ -17,7 +17,7 @@ not ready, man
 //console.log(":Loaded:")
 
 
-/*
+
 function sound(){
 	for(i=0; i < 12; i++){
 		console.log("at i:" + _tone_row[i])
@@ -104,7 +104,7 @@ function sound(){
 		}
 	}
 }
-*/
+
 
 
 //p5 implementation
@@ -118,10 +118,15 @@ function sound(){
 //	mySound.play();
 //}
 //
-//
-//function sound(){
-//	console.log("hey")
-//	console.log("bye")
-//	preload()
-//	setup()
-//}
+
+function sound(){
+	console.log("hey")
+	console.log("%cmatrix(): \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
+
+	
+	console.log("bye")
+	preload()
+	setup()
+	
+	console.log("%cmatrix(): \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
+}

@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - play the notes on the matrix by hovering
 - decide length of notes
 
+## [1.6.1] - 2017-10-10
+### Changed
+- overall UI padding
+- clean up
+- updated `readme.md` screenshot
+
 ## [1.6] - 2017-08-12
 ### Added
 - tone row and all three transformations are notated
@@ -196,6 +202,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.6.1]: #
 [1.6]: #
 [1.5.5]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/754f0ee1d8cf3ced8db90bb1f7bc51aa0f02bf23
 [1.5.4]: https://github.com/ManuelVargas1251/Twelve-Tone-Generator/commit/fc2406fddaa9d1d604b59b08f9cec2a378bf97d4

@@ -14,25 +14,25 @@ function show_keyboard(toggle){
 	if(toggle.checked){
 		console.log("check")
 		keyboard.style.display = 'block'	//show keyboard
-		_hide_table = false	//toggle the state
+		custom = true
 	}
 	else{
 		console.log("no check")
 		keyboard.style.display = 'none';	//hide keyboard
-		_hide_table = true	//toggle the state
-	}
-
-}
-
-//should I have all my toggles in one place?
-function toggle_custom_row(toggle){
-	if(toggle.checked)
-		custom = true
-	else
 		custom = false
-	console.log("custom: " + custom)
+	}
 }
+
+$('button').on('click', function(){
+    $('button').removeClass('selected');
+    $(this).addClass('selected');
+});
 
 function custom_row(){
-	//nothing yet
+	console.log("%ccustom_row()%c\tstart", "color: green; font-weight:bold;", "color: orange")
+	
+
+	
+	
+	console.log("%ccustom_row()%c\tdone", "color: green; font-weight:bold;", "color: limegreen")
 }
