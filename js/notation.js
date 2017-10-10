@@ -33,6 +33,9 @@ function note_format(note, clef){
 		}
 		return note + "/3"
 	}
+	else{
+		console.log("error: undefined clef")
+	}
 }
 
 //main function in notation
@@ -122,10 +125,10 @@ function draw_row(tone_row, row_label, staff){
 }
 
 function clean_staves() {
-	$("#staff_1").empty();
-	$("#staff_2").empty();
-	$("#staff_3").empty();
-	$("#staff_4").empty();
+	$("#staff_one").empty();
+	$("#staff_two").empty();
+	$("#staff_three").empty();
+	$("#staff_four").empty();
 }
 
 //returns the retrograde transformation of the tone row
@@ -142,12 +145,28 @@ function retrograde(my_row){
 //draw tone row plus 3 transformations
 function notation(){
 	console.log("%cnotation(): \t%cstart", "color: deeppink;font-weight:bold;", "color: orange");
+	clean_staves()	//removes content in staff divs
 	
 	//draw the notation of all four rows
-	draw_row(_tone_row, "Prime", "staff_1")
-	draw_row(retrograde(_tone_row.slice()), "Retrograde", "staff_2")
-	draw_row(_inverse, "Inverse", "staff_3")
-	draw_row(retrograde(_inverse), "Retrograde Inverse", "staff_4")
+	draw_row(
+		_tone_row, 
+		"Prime", 
+		"staff_one")
+	
+	draw_row(
+		retrograde(_tone_row.slice()), 
+		"Retrograde", 
+		"staff_two")
+	
+	draw_row(
+		_inverse, 
+		"Inverse", 
+		"staff_three")
+	
+	draw_row(
+		retrograde(_inverse), 
+		"Retrograde Inverse", 
+		"staff_four")
 	
 	console.log("%cnotation(): \t%cdone", "color: deeppink; font-weight:bold;", "color: limegreen")
 }

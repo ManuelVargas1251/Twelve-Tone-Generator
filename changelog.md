@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - play the notes on the matrix by hovering
 - decide length of notes
 
+## [1.6.1] - 2017-09-05
+### Changed
+- settings ui format
+- clean up
+
+
+
 ## [1.6] - 2017-08-12
 ### Added
 - tone row and all three transformations are notated

@@ -37,7 +37,7 @@
 			
 			<!-- title -->
 			<h1 class="animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.1<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 			
@@ -46,8 +46,10 @@
 			<h2>Settings</h2>
 			
 			<!-- accidental toggle -->
-			<div id="settings">
-				<h3 style="display: inline; padding-left: 1em;">Flats </h3>
+			<div id="settings-option">
+				<!--toggle name-->
+				<h4 style="display: inline;">Flats</h4>
+				<!-- switch-->
 				<label class="switch">
 					<input type="checkbox" onclick='toggle_accidental(this)'>
 					<div class="slider round"></div>
@@ -55,8 +57,10 @@
 			</div>
 			
 			<!-- clef toggle -->	
-			<div id="settings">
-				<h3 style="display: inline; padding-left: 1em;">Bass </h3>
+			<div id="settings-option">
+				<!--toggle name-->
+				<h4 style="display: inline;">Bass</h4>
+				<!-- switch-->
 				<label class="switch">
 					<input type="checkbox" onclick='toggle_clef(this)'>
 					<div class="slider round"></div>
@@ -64,69 +68,42 @@
 			</div>
 			
 			<!-- custom row -->	
-			<div id="settings">
+			<div id="settings-option">
 				<!--toggle name-->
-				<h3 style="display: inline; padding-left: 1em;">Custom </h3>
-				<!-- Switch-->
+				<h4 style="display: inline;">Custom</h4>
+				<!-- switch-->
 				<label class="switch">
-					<input type="checkbox" onclick='toggle_custom_row(this)'>
+					<input type="checkbox" onclick='show_keyboard(this)'>
 					<div class="slider round" style="opacity:.5;"></div>
 				</label>
 			</div>
 
 			<div id="keyboard" class="keyboard" >
-				<!-- C -->
-				<div class="key">
-					<!-- C# -->
-					<div class="key half"></div>
-				</div>
-				
-				<!-- D -->
-				<div class="key">
-					<!-- D# -->
-					<div class="key half"></div>
-				</div>
-				
-				<!-- E -->
-				<div class="key"></div>
-				
-				<!-- F -->
-				<div class="key">
-					<!-- F# -->
-					<div class="key half"></div>
-				</div>
-				
-				<!-- G -->
-				<div class="key">
-					<!-- G# -->
-					<div class="key half"></div>
-				</div>
-				
-				<!-- A -->
-				<div class="key">
-					<!-- A# -->
-					<div class="key half"></div>
-				</div>
-				
-				<!-- B -->
-				<div class="key">
-				</div>
-
+				<div class="key"></div>				<!-- C	-->
+				<div class="key-black"></div>		<!-- C# -->
+				<div class="key"></div>				<!-- D 	-->
+				<div class="key-black"></div>		<!-- D# -->
+				<div class="key"></div>				<!-- E	-->
+				<div class="key"></div>			<!-- F 	-->
+				<div class="key-black"></div>		<!-- F# -->
+				<div class="key"></div>			<!-- G 	-->
+				<div class="key-black"></div>		<!-- G# -->
+				<div class="key"></div>			<!-- A 	-->
+				<div class="key-black"></div>		<!-- A# -->
+				<div class="key"></div>				<!-- B 	-->
 			</div>
 			
-			
 			<br><br>
-			<br>
+			
 			<!-- buttons -->
-			<center>
-				<button id="tt" class="hvr-buzz-out" type="button" onclick="create()">Create</button>
 			
-				<br><br>
+				<button id="tt" type="button" onclick="create()">Create</button> 
 			
-				<button class="hvr-buzz-out">
+				<button>
 					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a>
 				</button>
-			</center><br><br>
+			
+			<br><br>
 			
 			<ul id="color-switcher">
 				<li id="wave" style="border: 4px solid #3f789e;" class="hvr-shrink"></li>
@@ -139,14 +116,16 @@
 		</div>
 		
 		<div id="main-panel">
-			<!-- display notes--><br><br>
+			<!-- display notes-->
 			<div id="mobile-header">
+				<br><br>
 				<h1 class="animated bounceInLeft">
-					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6<br>
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.1<br>
 					by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
 				</h1>
+				<br>
 			</div>
-			<br>
+			
 			<button id="mobile-button" class="hvr-buzz-out" type="button" onclick="create()">Create</button><p><br>
 			
 			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong><br>
@@ -154,7 +133,6 @@
 				<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
 				<row id="note_6"> </row> <row id="note_7"> </row> <row id="note_8"> </row>
 				<row id="note_9"> </row> <row id="note_10"> </row> <row id="note_11"> </row>
-			<br>
 			<br>
 			<br>
 			<br>
@@ -358,11 +336,11 @@
 		</div>
 		<br>
 		<div id="white-panel">
-			<!-- display musical staff -->
-			<div id="staff_1" style="display: block;"></div>
-			<div id="staff_2" style="display: block;"></div>
-			<div id="staff_3" style="display: block;"></div>
-			<div id="staff_4" style="display: block;"></div>
+			<!-- display musical staves -->
+			<div id="staff_one" style="display: block;"></div>
+			<div id="staff_two" style="display: block;"></div>
+			<div id="staff_three" style="display: block;"></div>
+			<div id="staff_four" style="display: block;"></div>
 		</div>
 		
 		<!-- external libraries -->
@@ -378,6 +356,7 @@
 		<script src="js/tone_row.js"></script>	
 		<script src="js/notation.js"></script>	
 		<script src="js/matrix.js"></script>	
+		<script src="js/sound.js"></script>	
 
 		<!-- single scripts -->
 		

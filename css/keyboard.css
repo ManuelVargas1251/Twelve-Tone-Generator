@@ -6,16 +6,17 @@ source: https://www.sapphirepaw.org/twelve.html
 I did not take anything else from that guy. I found his design after I created the basis of mine.
 */
 
-.keyboard{
+.keyboard {
     width: 80%;
     min-width: 230px;
     margin: auto;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 5px;
 	display: none;
 }
 
-.key{
+.key {
 	float: left;
     position: relative;
     height: 7em;
@@ -25,21 +26,13 @@ I did not take anything else from that guy. I found his design after I created t
     background-color: #fff;
 }
 
-/*
-.keyboard, .key{
-	z-index: 5;
-}
-*/
-
-.key.half {
+.key-black {
+	float: left;
     position: absolute;
-    right: -30%;
-    width: 60%;
-    top: 0px;
+    width: 10%;
     height: 4em;
-    z-index: 1;
+    z-index: 6;
     background-color: #000;
     border: 0;
+	border-radius: 0 0 4px 4px;
 }
-
-.key.half.used { background-color: #666; }
