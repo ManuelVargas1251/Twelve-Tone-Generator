@@ -43,9 +43,9 @@ tone_row.forEach(function(tone){
 		//push alll that to notes[th]
 		notes.push(new VF.StaveNote({
 			clef: clef,
-			keys: [note_format(tone[0], clef)],			   //vexflow keys given by `note_format()`
-			duration: "q"								   //quarter, whole, half
-		}).addAccidental(0, new VF.Accidental(tone[1])))   //adds 'accidental' modifier with '#' or 'b'
+			keys: [note_format(tone[0], clef)],			//vexflow keys given by `note_format()`
+			duration: "q"			//quarter, whole, half
+		}).addAccidental(0, new VF.Accidental(tone[1])))			//adds 'accidental' modifier with '#' or 'b'
 	}
 
 	//if note has no accidental, pass object without accidental modifier
