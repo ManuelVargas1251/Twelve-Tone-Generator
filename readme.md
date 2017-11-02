@@ -50,6 +50,8 @@ tone_row.forEach(function(tone){
 
 	//if note has no accidental, pass object without accidental modifier
 	else if(tone[1] == undefined){
+	
+		//push alll that to notes[th]
 		notes.push(new VF.StaveNote({
 			clef: clef,
 			keys: [note_format(tone[0], clef)],
