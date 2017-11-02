@@ -11,10 +11,10 @@ No media query since this is the default in Bootstrap*/
 
 /* Fuck yourself bootstrap */
 /*	--xx----xx-- ---xx--xx---
-	---xx--xx--- -xx-----xx--
-	----xxxx---- --xxxxxx----
-	---xx--xx--- -xx-----xx--
-	--xx----xx-- ---xxxxxx---
+---xx--xx--- -xx-----xx--
+----xxxx---- --xxxxxx----
+---xx--xx--- -xx-----xx--
+--xx----xx-- ---xxxxxx---
 */
 @media (max-width: 575px){
 
@@ -82,10 +82,10 @@ No media query since this is the default in Bootstrap*/
 }
 
 /*	---xx--xx--- -xxxx--xxxx-
-	-xx-----xx-- -xx-xxxx-xx-
-	--xxxxxx---- -xx--xx--xx-
-	-xx-----xx-- -xx------xx-
-	---xxxxxx--- -xx------xx-
+-xx-----xx-- -xx-xxxx-xx-
+--xxxxxx---- -xx--xx--xx-
+-xx-----xx-- -xx------xx-
+---xxxxxx--- -xx------xx-
 */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
@@ -93,10 +93,10 @@ No media query since this is the default in Bootstrap*/
 
 
 /*	-xxxx--xxxx- -xxxxxxx----
-	-xx-xxxx-xx- -xx----xxx--
-	-xx--xx--xx- -xx------xx-
-	-xx------xx- -xx----xxx--
-	-xx------xx- -xxxxxxxx---
+-xx-xxxx-xx- -xx----xxx--
+-xx--xx--xx- -xx------xx-
+-xx------xx- -xx----xxx--
+-xx------xx- -xxxxxxxx---
 */
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
@@ -110,7 +110,34 @@ No media query since this is the default in Bootstrap*/
 @media (min-width: 1200px) { 
 	/* aka the only reason i'm writing this */
 
+	h1{
+		font-size: 45px;
+	}
 
+	h2{
+		font-size: 34px;
+	}
+	h3,p,button{
+		font-size: 27px;
+	}
 
+	p{
+		font-size: 50px;
+	}
+
+	#left-panel {
+		width: 15%;
+		height:100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	
+	#main-panel {
+		left:	18.5%;
+		padding-left: 20px;
+	}
+	
+	
+	
 	/*  - --------------------------------- */
 }
