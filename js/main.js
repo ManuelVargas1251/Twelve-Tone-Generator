@@ -2,12 +2,11 @@
 *** main.js
 
 created by manuel vargas
-https://github.com/ManuelVargas1251
+https://github.com/manuelvargas1251
 
 website does twelve tone things
 read the readme.md for more info
 */
-
 "use strict";
 
 //globals
@@ -20,13 +19,8 @@ var _hide_keyboard = true	//wanted initial display to be clean
 //runs when create button is clicked
 function create(){
 	console.clear()	//removes previous log if one exists
-	
-	tone_row()		//creates random row
-	matrix()		//creates/displays matrix based on row
-	notation()		//draws notes onto staff
-	//sound()		//playes row in sequence and maybe some other stuff
-}
-
-function main(){
-	//nothing yet
+	tone_row()			//creates random row
+	matrix()				//creates/displays matrix based on row
+	notation()			//draws notes onto staff
+	//sound()				//playes row in sequence and maybe some other stuff
 }

@@ -1,5 +1,5 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
-![Version](https://img.shields.io/badge/Version-1.6.1-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.6.2-blue.svg)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 [View Demo](http://mnl.space/Twelve-Tone-Generator/)
@@ -14,9 +14,9 @@ Some notable examples:
 
 * [Arnold Schoenberg](https://www.youtube.com/watch?v=JEY9lmCZbIc)
 
-And my own [composition](notes/third_resolving_down_by_manuel_vargas.mp3) from high school (not so notable)
+And my own [composition](https://www.youtube.com/watch?v=PlvMd-R_k5c) (not so notable)
 
-Special thanks to [Luke Garrison](https://github.com/lag0215) for the themes. 
+Special thanks to [Luke Garrison](https://github.com/lag0215) for the themes.
 
 
 ## User Interface
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ```javascript
 //creating notes array for note objects to be pushed
-var notes = []	
+var notes = []
 
 tone_row.forEach(function(tone){
 
@@ -42,24 +42,24 @@ tone_row.forEach(function(tone){
 
 		//push alll that to notes[th]
 		notes.push(new VF.StaveNote({
-			clef: clef, 
-			keys: [note_format(tone[0], clef)],	//format is given by my function
-			duration: "q"	//all notes are quarter notes
-		}).addAccidental(0, new VF.Accidental(tone[1])))	//adds 'accidental' modifier
+			clef: clef,
+			keys: [note_format(tone[0], clef)],			   //vexflow keys given by `note_format()`
+			duration: "q"								   //quarter, whole, half
+		}).addAccidental(0, new VF.Accidental(tone[1])))   //adds 'accidental' modifier with '#' or 'b'
 	}
 
 	//if note has no accidental, pass object without accidental modifier
 	else if(tone[1] == undefined){
 		notes.push(new VF.StaveNote({
-			clef: clef, 
+			clef: clef,
 			keys: [note_format(tone[0], clef)],
 			duration: "q"
 		}))
 	}
 })
-```	
+```
 
-## References 
+## References
 * [Vexflow](https://github.com/0xfe/vexflow)
 
 * [Creating a Twelve Tone Matrix](http://unitus.org/FULL/12tone.pdf)
@@ -71,6 +71,3 @@ tone_row.forEach(function(tone){
 * [Hover.css](http://ianlunn.github.io/Hover/)
 
 * [Animate.css](https://daneden.github.io/animate.css/)
-
-
-
