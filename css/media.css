@@ -10,7 +10,12 @@ creating different views for different screen sizes
 No media query since this is the default in Bootstrap*/
 
 /* Fuck yourself bootstrap */
-/* XXXXXXXXXXXXXX SMALLL */
+/*	--xx----xx-- ---xx--xx---
+	---xx--xx--- -xx-----xx--
+	----xxxx---- --xxxxxx----
+	---xx--xx--- -xx-----xx--
+	--xx----xx-- ---xxxxxx---
+*/
 @media (max-width: 575px){
 
 	.left-panel-title{
@@ -23,8 +28,8 @@ No media query since this is the default in Bootstrap*/
 		transition: left 0.3s linear;
 		z-index: 1;
 	}
-	
-		#main-panel {
+
+	#main-panel {
 		position: relative;
 		display: inline-block;
 		left: 0px;
@@ -76,9 +81,23 @@ No media query since this is the default in Bootstrap*/
 	}
 }
 
+/*	---xx--xx--- -xxxx--xxxx-
+	-xx-----xx-- -xx-xxxx-xx-
+	--xxxxxx---- -xx--xx--xx-
+	-xx-----xx-- -xx------xx-
+	---xxxxxx--- -xx------xx-
+*/
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 
+
+
+/*	-xxxx--xxxx- -xxxxxxx----
+	-xx-xxxx-xx- -xx----xxx--
+	-xx--xx--xx- -xx------xx-
+	-xx------xx- -xx----xxx--
+	-xx------xx- -xxxxxxxx---
+*/
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
 
