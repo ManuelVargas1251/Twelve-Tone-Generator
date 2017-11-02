@@ -4,46 +4,27 @@
 creating different views for different screen sizes
 */
 
+/* Using Bootstrap Definitions */
 
-/* default is Level 0 */
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap*/
 
-/* level 1 */
-@media only screen and (max-width: 1400px) {
-	row {
-		font-size: 20px;
+/* Fuck yourself bootstrap */
+/* XXXXXXXXXXXXXX SMALLL */
+@media (max-width: 575px){
+
+	.left-panel-title{
+		display: none;
 	}
-	#main-panel{
-		padding-left: 20px;
-		padding-top: 35px important!;
+
+	#left-panel{
 		display: block;
+		position: absolute;
+		transition: left 0.3s linear;
+		z-index: 1;
 	}
-	#white-panel {
-		width:60%;
-		left:700px;
-		padding-left: 35px;
-	}
-	table {
-		font-size: 20px;
-	}
-	row {
-		display: inline;
-	}
-}
-
-/* level 2 */
-@media only screen and (max-width: 1000px) {
-
-}
-
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************************************************************/
-
-/* level 3 - portrait */
-@media only screen and (max-width: 760px) { 
 	
-	#main-panel {
+		#main-panel {
 		position: relative;
 		display: inline-block;
 		left: 0px;
@@ -51,22 +32,22 @@ creating different views for different screen sizes
 		width: 100%;
 		bottom: 50px;
 	}
-	
+
 	table{
 		font-size: 15px;
 	}
-	
+
 	/*	Create button only on mobile*/
 	#mobile-button{
 		display: block;
 		background: var(--theme-color);
 	}
-	
+
 	#mobile-header{
 		display: block;
 		padding-top: 42px;
 	}
-	
+
 	#left-panel{
 		display: block;
 		position: absolute;
@@ -88,9 +69,29 @@ creating different views for different screen sizes
 		cursor: pointer;
 		margin:10px 20px;
 		position: absolute;
-/*		top: 0px;*/
+		/*		top: 0px;*/
 		right:-48px;
 		padding: 6px;
 		border-radius: 9px;
 	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	/* default css written in this size */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	/* aka the only reason i'm writing this */
+
+
+
+	/*  - --------------------------------- */
 }

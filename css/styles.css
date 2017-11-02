@@ -11,10 +11,10 @@
 /* foundations */
 html{
 	--padding-top: 10px;		/* global top padding */
-	
+
 	background: var(--black-accent);
 	color: var(--white-accent);
-	
+
 	font-family: Raleway, sans-serif;
 	overflow: hidden;
 }
@@ -28,7 +28,7 @@ body {
 #left-panel {
 	background-color: var(--theme-color);
 	padding-top: var(--padding-top);
-	
+
 	width:200px;
 	height:100%;
 	display:block;
@@ -39,7 +39,7 @@ body {
 
 #main-panel {
 	padding-top: var(--padding-top);
-	
+
 	position:	absolute;
 	display:	inline-block;
 	left:	255px;
@@ -49,7 +49,7 @@ body {
 #white-panel {
 	background-color: var(--white-accent);
 	padding-top: var(--padding-top);
-	
+
 	position: absolute;
 	display: block;
 	left: 850px;
@@ -108,13 +108,13 @@ button {
 	color: var(--white-accent);
 	text-align: center;
 	font-weight: bold;
-	
+
 	/*everything else*/
 	outline: none;
 	background: var(--white-accent);
 	border: none;
 	background-color: var(--black-accent);
-    padding: 7px 22px;
+	padding: 7px 22px;
 	border-radius: 20px;
 	display: inline;
 	z-index: 3;
@@ -126,11 +126,11 @@ button {
 table {
 	border-collapse: collapse;
 	font-size: 30px;
-	
+
 }
 
 th, td {
-   border: 1px solid var(--white-accent); 
+	border: 1px solid var(--white-accent); 
 }
 
 tr:nth-child(even) {
@@ -166,7 +166,7 @@ i {
 	float: right;
 	margin-right: 10px;
 	border-radius: 50px;
-/*	border: 2px solid var(--theme-dark);*/
+	/*	border: 2px solid var(--theme-dark);*/
 }
 /* Hide default HTML checkbox */
 .switch input {display:none;}
@@ -214,35 +214,44 @@ input:checked + .slider:before {
 }
 
 #color-switcher {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 5px;
-  overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5px;
+	overflow: hidden;
+
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1.2rem;
+	padding-bottom: 2rem;
+	position: absolute;
+	z-index: 0;
+	background-color: var(--theme-color);
 }
 
 #color-switcher li {
-  	float: left;
-/*  width: 30px;*/
+	float: left;
+	/*  width: 30px;*/
 	width: 15%;
 	height: 30px;
 	margin: 0 12px 0px 0;
-/*	padding-left: 5px;*/
+	/*	padding-left: 5px;*/
 	border-radius: 30px;
-/*  	border: 2px solid var(--theme-dark);*/
+	/*  	border: 2px solid var(--theme-dark);*/
 }
 
 #wave {
-  background: #55aad1;
+	background: #55aad1;
 }
 #poupon {
-  background: #beb048;
+	background: #beb048;
 }
 #pistacio {
-  background: #55b483;
+	background: #55b483;
 }
 #autumn {
-  background: #cd552c;
+	background: #cd552c;
 }
 
 .custom input[type="text"] {
@@ -251,12 +260,12 @@ input:checked + .slider:before {
 	border-bottom: solid 2px #c9c9c9;
 	transition: border 0.3s;
 	background: --white-accent;
-	
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
+
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	resize: none;
 	margin: 1px;
 }
