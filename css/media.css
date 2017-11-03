@@ -131,13 +131,19 @@ No media query since this is the default in Bootstrap*/
 		padding-left: 30px;
 		padding-right: 30px;
 	}
-	
+
 	#main-panel {
 		left:	18.5%;
 		padding-left: 20px;
 	}
-	
-	
-	
+
+	#white-panel {
+		left: 990px;
+		padding-left: 20px;
+		height: 100%;
+		width: 100%;
+		top: 0px;
+	}
+
 	/*  - --------------------------------- */
 }
