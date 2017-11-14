@@ -40,8 +40,8 @@ body {
 #main-panel {
 	padding-top: var(--padding-top);
 
-	position:	absolute;
-	display:	inline-block;
+	position: absolute;
+	display: inline-block;
 	left:	255px;
 	padding-left: 20px;
 }
@@ -103,7 +103,7 @@ k {
 button {
 	/*text*/
 	font-family: Raleway, sans-serif;
-	font-size: 1em;
+	font-size: 1em;	
 	text-decoration: none;
 	color: var(--white-accent);
 	text-align: center;

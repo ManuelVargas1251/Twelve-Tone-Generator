@@ -9,13 +9,7 @@ creating different views for different screen sizes
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap*/
 
-/* Fuck yourself bootstrap */
-/*	--xx----xx-- ---xx--xx---
----xx--xx--- -xx-----xx--
-----xxxx---- --xxxxxx----
----xx--xx--- -xx-----xx--
---xx----xx-- ---xxxxxx---
-*/
+
 @media (max-width: 575px){
 
 	.left-panel-title{
@@ -72,39 +66,29 @@ No media query since this is the default in Bootstrap*/
 		vertical-align: top;
 		width: 25px;
 		cursor: pointer;
-		margin:10px 20px;
+		margin: 10px 20px;
 		position: absolute;
 		/*		top: 0px;*/
-		right:-48px;
+		right: -48px;
 		padding: 6px;
 		border-radius: 9px;
 	}
 }
 
-/*	---xx--xx--- -xxxx--xxxx-
--xx-----xx-- -xx-xxxx-xx-
---xxxxxx---- -xx--xx--xx-
--xx-----xx-- -xx------xx-
----xxxxxx--- -xx------xx-
-*/
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { }
 
 
-
-/*	-xxxx--xxxx- -xxxxxxx----
--xx-xxxx-xx- -xx----xxx--
--xx--xx--xx- -xx------xx-
--xx------xx- -xx----xxx--
--xx------xx- -xxxxxxxx---
-*/
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
+
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	/* default css written in this size */
 }
+
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
