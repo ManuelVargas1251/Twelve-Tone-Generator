@@ -1,5 +1,5 @@
 ![Programming language](https://img.shields.io/badge/Language-Javascript-black.svg)
-![Version](https://img.shields.io/badge/Version-1.6.2-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.6.3-blue.svg)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
 

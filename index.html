@@ -37,7 +37,7 @@ body is made of three sections:
 
 			<!-- title -->
 			<h1 class="left-panel-title animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.2<br>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.3<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 
@@ -97,30 +97,32 @@ body is made of three sections:
 
 			<!-- buttons -->
 
-			<button id="tt" type="button" onclick="create()">Create</button>
+			<button id="tt" 
+					type="button" 
+					onclick="create()">Create</button>
 
 			<button>
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a>
-			</button>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a></button>
 
 			<br><br>
 
 			<ul id="color-switcher">
-				<li id="wave" style="border: 4px solid #3f789e;" class="hvr-shrink"></li>
-				<li id="poupon" style="border: 4px solid #80792f;" class="hvr-shrink"></li>
-				<li id="pistacio" style="border: 4px solid #397a5e;" class="hvr-shrink"></li>
-				<li id="autumn" style="border: 4px solid #8a3d1e;" class="hvr-shrink"></li>
+				<li id="wave"></li>
+				<li id="poupon"></li>
+				<li id="pistacio"></li>
+				<li id="autumn"></li>
 			</ul>
 
 
 		</div>
 
 		<div id="main-panel">
+			
 			<!-- display notes-->
 			<div id="mobile-header">
 				<br><br>
 				<h1 class="animated bounceInLeft">
-					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.2<br>
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.3<br>
 					by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
 				</h1>
 				<br>
@@ -131,8 +133,8 @@ body is made of three sections:
 					class="hvr-buzz-out"
 					type="button" onclick="create()">Create</button><p><br>
 			<!-- End of Mobile Create Button -->
-			
-			
+
+
 			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong>
 			<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
 			<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
@@ -352,14 +354,14 @@ body is made of three sections:
 
 
 		<!-- local libraries -->
-		<script src="js/sound.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/theme.js"></script>
-		<script src="js/custom_row.js"></script>
-		<script src="js/tone_row.js"></script>
-		<script src="js/notation.js"></script>
-		<script src="js/matrix.js"></script>
-		<script src="js/sound.js"></script>	
+		<script src="js/generator/sound.js"></script>
+		<script src="js/generator/theme.js"></script>
+		<script src="js/generator/custom_row.js"></script>
+		<script src="js/generator/tone_row.js"></script>
+		<script src="js/generator/notation.js"></script>
+		<script src="js/generator/matrix.js"></script>
+		<script src="js/generator/sound.js"></script>	
 
 		<!-- mobile menu-->
 		<script>

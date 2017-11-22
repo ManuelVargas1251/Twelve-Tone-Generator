@@ -243,15 +243,19 @@ input:checked + .slider:before {
 
 #wave {
 	background: #55aad1;
+	border: 4px solid #3f789e;
 }
 #poupon {
 	background: #beb048;
+	border: 4px solid #80792f;
 }
 #pistacio {
 	background: #55b483;
+	border: 4px solid #397a5e;
 }
 #autumn {
 	background: #cd552c;
+	border: 4px solid #8a3d1e;
 }
 
 .custom input[type="text"] {

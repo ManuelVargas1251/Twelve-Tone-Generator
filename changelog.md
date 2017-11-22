@@ -16,7 +16,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - decide length of notes
 
 
-## [1.6.2] - 2017-11-01
+## [1.6.3] - 2017-11-22
+
+### Changed
+- replaced `var` with `let` when possible
+- moved all globals variables to `main.js`
+- moved all my code to a new folder `generator`
+- updated some base JS API with JQuery
+- get table id
+
+### Removed
+- css in html tags
+
+
+## [1.6.2] - 2017-11-21
 ### Added
 - hotjar analytics
 
@@ -219,6 +232,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.6.3]: #
 [1.6.2]: #
 [1.6.1]: #
 [1.6]: #

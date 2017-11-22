@@ -5,25 +5,42 @@ this figures out the correct format of note rows and
 places them in the matrix in the main panel.
 */
 
-//prints state of variables before proceeding to create the matrix
-function status(){
-	console.log("%c::::::::matrix::::::::", 'background: #1c1c1c; color: #ffda55')
-	//console.log("%calpha_copy: " + _alphabet_copy, "background: #1c1c1c; color: #11ee00")
-	console.log("%ctone_row: " + _tone_row, "background: #1c1c1c; color: #00aaff")
+
+//main matrix function
+function matrix(){
+
+	console.log("%cmatrix(): \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
+
+	show_labels() 	//show matrix labels
+	show_matrix()	//unhide the matrix
+
+	//creates new alpha array based on the tone row and pass
+	generate_matrix(create_clock())	//generates and populates matrix
+
+	console.log("%cmatrix(): \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
 }
+//************************************************************************************
+//************************************************************************************
+//************************************************************************************
+//************************************************************************************
+//************************************************************************************
+//************************************************************************************
+
 
 //creates clock array = alphabet[] with a[0] starting with _tone_row's first letter
 //this is needed to find out the order of the rows in the matrix
 function create_clock(){
 
-	var clock_array = []
+	let clock_array = []
+
 	clock_array.push(_tone_row[0])	//store first note of tone row
 
 	while(clock_array.length != 12){
 		//push the next chromatic note to the clock array
 		//gives me an excuse to reuse my transpose_note() function
-		clock_array.push(transpose_note(clock_array[clock_array.length-1],1))
+		clock_array.push(transpose_note(clock_array[clock_array.length-1], 1))
 	}
+
 	//console.log(clock_array)
 	return clock_array
 }
@@ -33,7 +50,8 @@ function create_clock(){
 function transpose_note(note, value){
 
 	//address of note in the alphabet array
-	var index = _alphabet.indexOf(note)	
+	let index = _alphabet.indexOf(note)	
+
 	//console.log("index: " + index)
 
 	//modulo makes location wrap around
@@ -51,7 +69,8 @@ function transpose_note(note, value){
 //transpose an array of notes all by the same value
 //not just for chords but entire pieces
 function multi_transpose(note_array, value){
-	new_array = []	//store transposed array
+
+	let new_array = []	//store transposed array
 
 	while(note_array.length){
 		//console.log("note_array: "+note_array)
@@ -62,38 +81,38 @@ function multi_transpose(note_array, value){
 		new_array.push(note)
 		//console.log("new array:" + new_array)
 	}
+
 	return new_array
 }
 
+//get table id in correct format
 function get_table_id(column, row){
-	var x = 1, y = 1, dash = "-" 
+	
+	let x = 1, y = 1
 
 	x = column++
 	y += row
 
-	var id = x.toString()	//attach x value
-	id = id.concat(dash)	//attach dash
-	id = id.concat(y.toString())	//attach y value
-
-	//console.log("id: "+ id)
-	return id	//return string for note location id in html
+	//returmed joined string for note location id in html
+	return "#".concat(x.toString()).concat("-").concat(y.toString())	
 }
 
 //get address number
 function get_letter_address(clock_array, letter){
-	for(var i = 0; i < 12;i++ ){
+	for(let i = 0; i < 12;i++ ){
 		if (letter == clock_array[i])
 			return i
 	}
 }
 
+
 function generate_matrix(clock_array){
 
-	var row_index = 0, column_index = 1
+	let row_index = 0, column_index = 1
 
 	/********** 12 rows **********/
 	while(row_index != 12){
-		var trans_array = []	//clean array after every row
+		let trans_array = []	//clean array after every row
 
 		//in order to get the correct order of transpositions in the matrix,
 		//we have to calulate the order in which the tranposed arrays are printed
@@ -103,9 +122,9 @@ function generate_matrix(clock_array){
 		//give us which tranposition array we should compute
 		//do this for the entire tone row
 		//these variables all need to be given better names
-		var letter = _tone_row[row_index]
-		var letter_address = get_letter_address(clock_array.slice(), letter)
-		var y_letter = 12 - letter_address
+		let letter = _tone_row[row_index]
+		let letter_address = get_letter_address(clock_array.slice(), letter)
+		let y_letter = 12 - letter_address
 		//y_letter represents how many half steps we must tranpose the original tone row
 		//inorder receive the correct tranposition
 
@@ -124,51 +143,32 @@ function generate_matrix(clock_array){
 		/********** 12 notes **********/
 		while(column_index != 13){
 
-			var table_id = get_table_id(column_index, row_index)
-			var actual_index = column_index - 1
+			let table_id = get_table_id(column_index, row_index)
+			let actual_index = column_index - 1
 
-
-			document.getElementById(table_id).innerHTML = trans_array[actual_index]	//send note to html
+			$(table_id).html(trans_array[actual_index])	//send note to html
 
 			column_index++
 		}
 		row_index++
 		column_index = 1
 	}
-
 	//console.log("inverse: "+_inverse)
 }
 
-
 //shows matrix after row is created but before matrix data is generated
 function show_matrix(){
-
-	var matrix = document.getElementById('matrix');
-
+	
 	if(_hide_table == true){
-		matrix.style.display = 'block'
+		
+		$("#matrix").css("display","block")
 		_hide_table = false	//toggle the state
 	}
-
 }
 
 //hides main-panel initially
 //should move to matrix function
 function show_labels(){
-	$('#hide-1').css("display", "")
-	$('#hide-2').css("display", "")
-	//console.log("labels")
+	$("#hide-1, #hide-2").css("display", "")
 }
 
-//main matrix function
-function matrix(){
-	console.log("%cmatrix(): \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
-
-	//status()			//displays arrays
-	show_labels() 	//show matrix labels
-	show_matrix()	//unhide the matrix
-
-	//creates new alpha array based on the tone row and pass
-	generate_matrix(create_clock())	//generates and populates matrix
-	console.log("%cmatrix(): \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
-}
