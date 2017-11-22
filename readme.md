@@ -2,6 +2,7 @@
 ![Version](https://img.shields.io/badge/Version-1.6.2-blue.svg)
 
 # [Twelve Tone](https://en.wikipedia.org/wiki/Twelve-tone_technique#Tone_row) Generator
+
 [View Demo](http://mnl.space/Twelve-Tone-Generator/)
 
 This web application creates a random twelve tone row, it's matrix, and staff notation. I plan to add sound soon. I wanted to see how well [Automatic Semicolon Insertion](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-rules-of-automatic-semicolon-insertion) works so this entire project tries to be semicolon free.
@@ -18,9 +19,6 @@ And my own [composition](https://www.youtube.com/watch?v=PlvMd-R_k5c) (not so no
 
 Special thanks to [Luke Garrison](https://github.com/lag0215) for the themes.
 
-
-## User Interface
-
 ![ttg](screenshot.png)
 
 ## [Changelog](https://github.com/ManuelVargas1251/Twelve-Tone-Generator/blob/master/changelog.md)
@@ -29,7 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Issues
 
-[Fixed] Cannot push note objects to Vexflow vector with and without 'accidental' modifier (not all the notes will have accidentals). If there was a way to pass the object with a null value then I could just loop with the 'accidental' modifier object. After an unsuccesful [pull request](https://github.com/0xfe/vexflow/pull/543#issuecomment-296598084), I fixed it with a workaround by testing each incoming note to see if it had an accidental and pushing a different object to the vector for natural and accidental note:
+The notation software used, Vexflow, doesn't have a built in way to pass a **`''`** as a valid "none" accidental so I built this function to be able to loop more efficiently.
 
 ```javascript
 //creating notes array for note objects to be pushed

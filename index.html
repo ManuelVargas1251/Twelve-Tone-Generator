@@ -19,13 +19,13 @@
 		<link rel="stylesheet" href="css/external/font-awesome-4.7.0/css/font-awesome.min.css">
 	</head>
 
-	<body onload="main()">
+	<body>
 		<!--
-		body is made of three sections:
-		- left panel = settings
-		- main panel = tone row and matric display
-		- white panel = sheet music notation display
-		-->
+body is made of three sections:
+- left panel = settings
+- main panel = tone row and matric display
+- white panel = sheet music notation display
+-->
 
 
 		<div id="left-panel">
@@ -36,7 +36,7 @@
 			</div>
 
 			<!-- title -->
-			<h1 class="animated bounceInLeft">
+			<h1 class="left-panel-title animated bounceInLeft">
 				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.2<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
@@ -48,7 +48,7 @@
 			<!-- accidental toggle -->
 			<div id="settings-option">
 				<!--toggle name-->
-				<h4 style="display: inline;">Flats</h4>
+				<h3 style="display: inline;">Flats</h3>
 				<!-- switch-->
 				<label class="switch">
 					<input type="checkbox" onclick='toggle_accidental(this)'>
@@ -59,7 +59,7 @@
 			<!-- clef toggle -->
 			<div id="settings-option">
 				<!--toggle name-->
-				<h4 style="display: inline;">Bass</h4>
+				<h3 style="display: inline;">Bass</h3>
 				<!-- switch-->
 				<label class="switch">
 					<input type="checkbox" onclick='toggle_clef(this)'>
@@ -70,7 +70,7 @@
 			<!-- custom row -->
 			<div id="settings-option">
 				<!--toggle name-->
-				<h4 style="display: inline;">Custom</h4>
+				<h3 style="display: inline;">Custom</h3>
 				<!-- switch-->
 				<label class="switch">
 					<input type="checkbox" onclick='show_keyboard(this)'>
@@ -97,11 +97,11 @@
 
 			<!-- buttons -->
 
-				<button id="tt" type="button" onclick="create()">Create</button>
+			<button id="tt" type="button" onclick="create()">Create</button>
 
-				<button>
-					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a>
-				</button>
+			<button>
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a>
+			</button>
 
 			<br><br>
 
@@ -130,21 +130,21 @@
 					id="mobile-button"
 					class="hvr-buzz-out"
 					type="button" onclick="create()">Create</button><p><br>
+			<!-- End of Mobile Create Button -->
+			
+			
+			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong>
+			<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
+			<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
+			<row id="note_6"> </row> <row id="note_7"> </row> <row id="note_8"> </row>
+			<row id="note_9"> </row> <row id="note_10"> </row> <row id="note_11"> </row>
+			<br>
 
-			<strong id="hide-1" style="font-size: 30px; display: none;">Tone Row<br></strong><br>
-				<row id="note_0"> </row> <row id="note_1"> </row> <row id="note_2"> </row>
-				<row id="note_3"> </row> <row id="note_4"> </row> <row id="note_5"> </row>
-				<row id="note_6"> </row> <row id="note_7"> </row> <row id="note_8"> </row>
-				<row id="note_9"> </row> <row id="note_10"> </row> <row id="note_11"> </row>
-			<br>
-			<br>
-			<br>
-			<br>
 
 			<!-- display matrix	-->
 			<strong id="hide-2" style="font-size: 30px; display: none;">Tone Matrix<br></strong><br>
 			<table class="hoverTable" id="matrix">
-	<!--			#1-->
+				<!--			#1-->
 				<tr>
 					<th><k id="1-1"></k></th>
 					<th><k id="2-1"></k></th>
@@ -160,7 +160,7 @@
 					<th><k id="12-1"></k></th>
 				</tr>
 
-	<!--			#2-->
+				<!--			#2-->
 				<tr>
 					<th><k id="1-2"></k></th>
 					<th><k id="2-2"></k></th>
@@ -176,7 +176,7 @@
 					<th><k id="12-2"></k></th>
 				</tr>
 
-	<!--			#3-->
+				<!--			#3-->
 				<tr>
 					<th><k id="1-3"></k></th>
 					<th><k id="2-3"></k></th>
@@ -192,7 +192,7 @@
 					<th><k id="12-3"></k></th>
 				</tr>
 
-	<!--			#4-->
+				<!--			#4-->
 				<tr>
 					<th><k id="1-4"></k></th>
 					<th><k id="2-4"></k></th>
@@ -208,7 +208,7 @@
 					<th><k id="12-4"></k></th>
 				</tr>
 
-	<!--			#5-->
+				<!--			#5-->
 				<tr>
 					<th><k id="1-5"></k></th>
 					<th><k id="2-5"></k></th>
@@ -224,7 +224,7 @@
 					<th><k id="12-5"></k></th>
 				</tr>
 
-	<!--			#6-->
+				<!--			#6-->
 				<tr>
 					<th><k id="1-6"></k></th>
 					<th><k id="2-6"></k></th>
@@ -240,7 +240,7 @@
 					<th><k id="12-6"></k></th>
 				</tr>
 
-	<!--			#7-->
+				<!--			#7-->
 				<tr>
 					<th><k id="1-7"></k></th>
 					<th><k id="2-7"></k></th>
@@ -256,7 +256,7 @@
 					<th><k id="12-7"></k></th>
 				</tr>
 
-	<!--			#8-->
+				<!--			#8-->
 				<tr>
 					<th><k id="1-8"></k></th>
 					<th><k id="2-8"></k></th>
@@ -272,7 +272,7 @@
 					<th><k id="12-8"></k></th>
 				</tr>
 
-	<!--			#9-->
+				<!--			#9-->
 				<tr>
 					<th><k id="1-9"></k></th>
 					<th><k id="2-9"></k></th>
@@ -288,7 +288,7 @@
 					<th><k id="12-9"></k></th>
 				</tr>
 
-	<!--			#10-->
+				<!--			#10-->
 				<tr>
 					<th><k id="1-10"></k></th>
 					<th><k id="2-10"></k></th>
@@ -304,7 +304,7 @@
 					<th><k id="12-10"></k></th>
 				</tr>
 
-	<!--			#11-->
+				<!--			#11-->
 				<tr>
 					<th><k id="1-11"></k></th>
 					<th><k id="2-11"></k></th>
@@ -320,7 +320,7 @@
 					<th><k id="12-11"></k></th>
 				</tr>
 
-	<!--			#12-->
+				<!--			#12-->
 				<tr>
 					<th><k id="1-12"></k></th>
 					<th><k id="2-12"></k></th>
@@ -386,9 +386,9 @@
 		<!-- google analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+									})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 			ga('create', 'UA-77813077-2', 'auto');
 			ga('send', 'pageview');

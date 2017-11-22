@@ -82,8 +82,8 @@ function draw_row(tone_row, row_label, staff){
 	var notes = []	
 	
 	tone_row.forEach(function(tone){
-		//console.log("element 0: "+tone[0])
-		//console.log("element 1: "+tone[1])
+		//console.log("element 0: " + tone[0])
+		//console.log("element 1: " + tone[1])
 		
 		//if note has either accidental, pass object with modifier
 		if(tone[1] == '#' || tone[1] == 'b' ){
