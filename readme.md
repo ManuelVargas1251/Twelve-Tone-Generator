@@ -31,7 +31,7 @@ The notation software used, Vexflow, doesn't have a built in way to pass a **`''
 
 ```javascript
 //creating notes array for note objects to be pushed
-var notes = []
+let notes = []
 
 tone_row.forEach(function(tone){
 

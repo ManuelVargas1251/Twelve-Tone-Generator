@@ -1,10 +1,11 @@
-Twelve Tone Generator
-Creates a random tone row and matrix for use in twelve tone music
+#Twelve Tone Generator
+Creates a random tone row and matrix for use in twelve tone music.
+
 Copyright (C) 2017  Manuel Vargas
 
-github: github.com/ManuelVargas1251
-contact: manuelvargas1251@gmail.com
+[Github](github.com/ManuelVargas1251) | [Email](manuelvargas1251@gmail.com)
 
+## License
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
