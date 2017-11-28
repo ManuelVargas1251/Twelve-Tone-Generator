@@ -60,14 +60,4 @@ tone_row.forEach(function(tone){
 ```
 
 ## References
-* [Vexflow](https://github.com/0xfe/vexflow)
-
-* [Creating a Twelve Tone Matrix](http://unitus.org/FULL/12tone.pdf)
-
-* [Wikipedia](https://en.wikipedia.org/wiki/Twelve-tone_technique)
-
-* [jQuery](https://jquery.com/)
-
-* [Hover.css](http://ianlunn.github.io/Hover/)
-
-* [Animate.css](https://daneden.github.io/animate.css/)
+Using [Vexflow](https://github.com/0xfe/vexflow), [this instruction set to create a twelve tone matrix](http://unitus.org/FULL/12tone.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Twelve-tone_technique), [jQuery](https://jquery.com/), [Hover.css](http://ianlunn.github.io/Hover/), [Animate.css](https://daneden.github.io/animate.css/).
