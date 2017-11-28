@@ -4,8 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
-### Future Additions
+## Future Plans
 - input your own tone row
 - swap note stem up or down
 - play the notes on the tone row
@@ -14,6 +13,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [combinatoriality](https://en.wikipedia.org/wiki/Combinatoriality)
 - play the notes on the matrix by hovering
 - decide length of notes
+
+
+## [1.6.4] - 2017-11-28
+
+### Added
+- more `let` conversions
+- make `load_alphabet` return a copy of the alphabet
+- added `keyboard.js` for keyboard logic
+- organized css
+
+### Changed
+- updated license to it will be detected by github
+- using event handler for main `click` function
+- rename `load_array` to `load_alphabet`
+- slimed down staff removal with jQuery
+- css for main views, need more improvement!
+
+### Removed
+- `:` in console statuses
+- no `custom_row.js`, moved to `tone_row.js`
+- no more hotjar, it was a trial
+- removed inline `onclick` for create button
 
 
 ## [1.6.3] - 2017-11-22
@@ -232,6 +253,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - initial commit, only generates random tone row
 
 [Unreleased]: #
+[1.6.4]: #
 [1.6.3]: #
 [1.6.2]: #
 [1.6.1]: #

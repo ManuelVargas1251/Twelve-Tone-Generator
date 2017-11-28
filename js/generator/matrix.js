@@ -9,7 +9,7 @@ places them in the matrix in the main panel.
 //main matrix function
 function matrix(){
 
-	console.log("%cmatrix(): \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
+	console.log("%cmatrix() \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
 
 	show_labels() 	//show matrix labels
 	show_matrix()	//unhide the matrix
@@ -17,7 +17,7 @@ function matrix(){
 	//creates new alpha array based on the tone row and pass
 	generate_matrix(create_clock())	//generates and populates matrix
 
-	console.log("%cmatrix(): \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
+	console.log("%cmatrix() \t\t%cdone", "color: purple; font-weight:bold;", "color: limegreen")
 }
 //************************************************************************************
 //************************************************************************************

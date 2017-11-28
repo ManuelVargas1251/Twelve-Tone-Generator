@@ -36,8 +36,8 @@ body is made of three sections:
 			</div>
 
 			<!-- title -->
-			<h1 class="left-panel-title animated bounceInLeft">
-				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.3<br>
+			<h1 id="title" class="left-panel-title animated bounceInLeft">
+				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.4<br>
 				by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm><br><br>
 			</h1>
 
@@ -97,9 +97,7 @@ body is made of three sections:
 
 			<!-- buttons -->
 
-			<button id="tt" 
-					type="button" 
-					onclick="create()">Create</button>
+			<button id="create" type="button">Create</button>
 
 			<button>
 				<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">About</a></button>
@@ -117,12 +115,12 @@ body is made of three sections:
 		</div>
 
 		<div id="main-panel">
-			
+
 			<!-- display notes-->
 			<div id="mobile-header">
 				<br><br>
 				<h1 class="animated bounceInLeft">
-					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.3<br>
+					<a href="https://github.com/ManuelVargas1251/Twelve-Tone-Generator" target="_blank">Twelve Tone <br>Generator</a><sm>  1.6.4<br>
 					by <a href="https://github.com/ManuelVargas1251" target="_blank">Manuel Vargas</a></sm>
 				</h1>
 				<br>
@@ -357,7 +355,7 @@ body is made of three sections:
 		<script src="js/main.js"></script>
 		<script src="js/generator/sound.js"></script>
 		<script src="js/generator/theme.js"></script>
-		<script src="js/generator/custom_row.js"></script>
+		<script src="js/generator/keyboard.js"></script>
 		<script src="js/generator/tone_row.js"></script>
 		<script src="js/generator/notation.js"></script>
 		<script src="js/generator/matrix.js"></script>
@@ -371,18 +369,6 @@ body is made of three sections:
 					$('#mobile-button').toggleClass('visible');
 				});
 			});
-		</script>
-
-		<!-- Hotjar Tracking Code for https://mnl.space/Twelve-Tone-Generator/ -->
-		<script>
-			(function(h,o,t,j,a,r){
-				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-				h._hjSettings={hjid:676656,hjsv:6};
-				a=o.getElementsByTagName('head')[0];
-				r=o.createElement('script');r.async=1;
-				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-				a.appendChild(r);
-			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
 		<!-- google analytics -->

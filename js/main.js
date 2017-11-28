@@ -21,21 +21,19 @@ var _hide_keyboard	= true	//wanted initial display to be clean
 var _flats_on		= false
 var _bass_on		= false	//option to draw on bass clef
 
-//runs when create button is clicked
-function create(){
+
+//run when 'create' button is clicked
+$("#create").click(function(){
 	
 	//removes previous log if one exists
 	console.clear()	
-	
+
 	tone_row()		//creates random row
 	matrix()		//creates/displays matrix based on row
 	notation()		//draws notes onto staff
 	//sound()		//playes row in sequence and maybe some other stuff
-}
+})
 
-//************************************************************************************
-//************************************************************************************
-//************************************************************************************
-//************************************************************************************
+
 //************************************************************************************
 //************************************************************************************

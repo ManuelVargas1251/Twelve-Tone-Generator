@@ -9,13 +9,13 @@ this takes place in the white panel
 //draw tone row plus 3 transformations
 function notation(){
 
-	console.log("%cnotation(): \t%cstart", "color: deeppink;font-weight:bold;", "color: orange");
+	console.log("%cnotation()  \t%cstart", "color: deeppink;font-weight:bold;", "color: orange");
 
 	clean_staves()	//removes content in staff divs
 
 	draw_rows()
 
-	console.log("%cnotation(): \t%cdone", "color: deeppink; font-weight:bold;", "color: limegreen")
+	console.log("%cnotation()  \t%cdone", "color: deeppink; font-weight:bold;", "color: limegreen")
 }
 //************************************************************************************
 //************************************************************************************
@@ -109,11 +109,9 @@ function draw_row(tone_row, row_label, staff){
 	context.fillText(row_label,10,50)
 }
 
+//remove notes from the staves
 function clean_staves() {
-	$("#staff_one").empty();
-	$("#staff_two").empty();
-	$("#staff_three").empty();
-	$("#staff_four").empty();
+	$("#staff_one, #staff_two, #staff_three, #staff_four").empty()
 }
 
 //returns the retrograde transformation of the tone row
@@ -131,22 +129,22 @@ function retrograde(prime){
 function draw_rows(){
 
 	draw_row(
-		_tone_row, 
-		"Prime", 
-		"staff_one")
+		_tone_row,		//draw original row
+		"Prime", 		//staff label
+		"staff_one")	//which staff to draw to
 
 	draw_row(
-		retrograde(_tone_row), 
+		retrograde(_tone_row),	//draw retrograde of original row
 		"Retrograde", 
 		"staff_two")
 
 	draw_row(
-		_inverse, 
+		_inverse,		//draw inverse of original row
 		"Inverse", 
 		"staff_three")
 
 	draw_row(
-		retrograde(_inverse),	//reuse retrograde on inverse
+		retrograde(_inverse),	//reuse retrograde on inverse of row
 		"Retrograde Inverse", 
 		"staff_four")
 }
@@ -165,6 +163,8 @@ function toggle_clef(toggle){
 function note_format(note, clef){
 
 	if(clef == 'treble'){
+		
+		//these are exceptions so the notes don't end up on ledger lines
 		if(note == 'C' || note == 'Db' || note == 'D' || note == 'C#'){
 			return note + "/5"
 		}
@@ -180,4 +180,3 @@ function note_format(note, clef){
 		console.log("error: undefined clef")
 	}
 }
-
