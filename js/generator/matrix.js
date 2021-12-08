@@ -7,6 +7,7 @@ places them in the matrix in the main panel.
 
 
 //main matrix function
+let edo = 12;
 function matrix(){
 
 	console.log("%cmatrix() \t\t%cstart", "color: purple; font-weight:bold;", "color: orange")
@@ -35,7 +36,7 @@ function create_clock(){
 
 	clock_array.push(_tone_row[0])	//store first note of tone row
 
-	while(clock_array.length != 12){
+	while(clock_array.length != edo){
 		//push the next chromatic note to the clock array
 		//gives me an excuse to reuse my transpose_note() function
 		clock_array.push(transpose_note(clock_array[clock_array.length-1], 1))
@@ -46,7 +47,7 @@ function create_clock(){
 }
 
 //function to transpose a note
-//value is an (+,-) int with max = 12 (octave)
+//value is an (+,-) int with max = edo (octave)
 function transpose_note(note, value){
 
 	//address of note in the alphabet array
@@ -56,10 +57,10 @@ function transpose_note(note, value){
 
 	//modulo makes location wrap around
 	if(value > 0)  //positive values
-		index = (index += value) % 12
+		index = (index += value) % edo
 	else{          //negative values
-		value += 12
-		index = (index += value) % 12
+		value += edo
+		index = (index += value) % edo
 	}
 
 	//console.log("new index: " + index)
@@ -99,7 +100,7 @@ function get_table_id(column, row){
 
 //get address number
 function get_letter_address(clock_array, letter){
-	for(let i = 0; i < 12;i++ ){
+	for(let i = 0; i < edo;i++ ){
 		if (letter == clock_array[i])
 			return i
 	}
@@ -110,21 +111,21 @@ function generate_matrix(clock_array){
 
 	let row_index = 0, column_index = 1
 
-	/********** 12 rows **********/
-	while(row_index != 12){
+	/********** edo rows **********/
+	while(row_index != edo){
 		let trans_array = []	//clean array after every row
 
 		//in order to get the correct order of transpositions in the matrix,
 		//we have to calulate the order in which the tranposed arrays are printed
 		//we do this by going in the order of the tone row notes and finding it's location
 		//according to the clock array which is just a tranposed version of the alphabet array
-		//once we know the address for the note, we can subtract it from 12 and that will
+		//once we know the address for the note, we can subtract it from edo and that will
 		//give us which tranposition array we should compute
 		//do this for the entire tone row
 		//these variables all need to be given better names
 		let letter = _tone_row[row_index]
 		let letter_address = get_letter_address(clock_array.slice(), letter)
-		let y_letter = 12 - letter_address
+		let y_letter = edo - letter_address
 		//y_letter represents how many half steps we must tranpose the original tone row
 		//inorder receive the correct tranposition
 
@@ -140,7 +141,7 @@ function generate_matrix(clock_array){
 		//inverse row gets loaded from first index of every transposed row
 		_inverse.push(trans_array[0]);
 
-		/********** 12 notes **********/
+		/********** edo notes **********/
 		while(column_index != 13){
 
 			let table_id = get_table_id(column_index, row_index)
